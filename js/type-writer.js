@@ -14,13 +14,13 @@ var typewriter = new Typewriter(app, {
 typewriter
   .typeString(
     `${reservada}function</span> ${nomFuncion}skills</span>${llaves}() {</span><br/>` +
-      `&nbsp;&nbsp;&nbsp;&nbsp;${reservada}var</span>${nomVar} frontEnd </span> = ` +
-      `${string} 'HTML5' </span> + ${string} 'CSS3' </span> + ${string}'CMS'</span> + ${string} 'JavaScript' </span> + ${string} 'Vue.js'</span>+ ${string} 'Angular'</span>;<br/>` +
-      `&nbsp;&nbsp;&nbsp;&nbsp;${reservada}var</span>${nomVar} backEnd </span> = ` +
-      `${string}'Java'</span> + ${string}'PHP'</span> + ${string} 'TypeScript' </span> + ${string}'Node.js'</span> + ${string}'Express.js'</span>;<br/>` +
-      `&nbsp;&nbsp;&nbsp;&nbsp;${reservada}var</span> ${nomVar}BBDD</span> = ${string}'MySQL'</span> + ${string}'MongoDB'</span>;<br/>` +
-      `&nbsp;&nbsp;&nbsp;&nbsp;${reservada}var</span> ${nomVar}otrosConocimientos</span> = ` +
-      `${string}'GIT'</span> + ${string}'GitFlow'</span> + ${string}'Docker'</span> + ${string}'Kubernetes'</span> + ${string}'CI/CD'</span>;<br/>` +
+      `&nbsp;&nbsp;&nbsp;&nbsp;${reservada}let</span>${nomVar} frontEnd </span> = ` +
+      `${string} 'JavaScript' </span> + ${string} 'TypeScript' </span> + ${string} 'VUE'</span>+ ${string} 'Angular'</span> ;<br/>` +
+      `&nbsp;&nbsp;&nbsp;&nbsp;${reservada}let</span>${nomVar} backEnd </span> = ` +
+      `${string}'Java'</span> + ${string} 'TypeScript' </span> + ${string} 'Python' </span> + ${string}'Spring'</span> + ${string}'NestJS'</span> + ${string} 'FastAPI' </span>;<br/>` +
+      `&nbsp;&nbsp;&nbsp;&nbsp;${reservada}let</span> ${nomVar}BBDD</span> = ${string}'MySQL'</span> + ${string}'MongoDB'</span> + ${string}'MS SQL Server'</span>;<br/>` +
+      `&nbsp;&nbsp;&nbsp;&nbsp;${reservada}let</span> ${nomVar}otherKnowledge</span> = ` +
+      `${string}'GIT'</span> + ${string}'Docker'</span> + ${string}'Kubernetes'</span> + ${string}'CI/CD'</span> + ${string}'AWS'</span> + ${string}'Azure'</span> + ${string}'GCP'</span> ;<br/>` +
       `&nbsp;&nbsp;&nbsp;&nbsp;${nomVar}console</span>.${nomFuncion}log</span>${llaves}(</span>${string}'Always learning something new...'</span>${llaves})</span>;<br/> ${llaves}}</span>;`
   )
   .start();
