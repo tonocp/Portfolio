@@ -1,0 +1,62 @@
+---
+interface Project {
+  id: string;
+  data: {
+    title: string;
+    tagline: string;
+    year: number;
+    stack: string[];
+    summary: string;
+    role: string;
+    links: { label: string; href: string }[];
+    featured: boolean;
+    order: number;
+    cover: string;
+    theme: "amber" | "ice" | "coral" | "mint";
+  };
+}
+
+interface Props {
+  projects: Project[];
+}
+
+const { projects } = Astro.props;
+---
+
+<section class="section shell">
+  <div class="section-heading projects-heading">
+    <p class="eyebrow">Selección curada</p>
+    <h2>Proyectos que enseñan cómo pienso y cómo construyo.</h2>
+    <p class="section-lead">
+      Menos catálogo por framework y más contexto: qué resuelve cada producto, qué stack hay detrás y por qué merece
+      estar aquí.
+    </p>
+  </div>
+
+  <div class="projects-grid">
+    {
+      projects.map((project) => (
+        <article class={`project-card theme-${project.data.theme}`}>
+          <div class="project-media">
+            <img src={project.data.cover} alt={`Captura de ${project.data.title}`} loading="lazy" />
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span>{project.data.year}</span>
+              <span>{project.data.role}</span>
+            </div>
+            <h3>{project.data.title}</h3>
+            <p class="project-tagline">{project.data.tagline}</p>
+            <p class="project-summary">{project.data.summary}</p>
+            <ul class="stack-list" aria-label={`Tecnologías usadas en ${project.data.title}`}>
+              {project.data.stack.map((item) => <li>{item}</li>)}
+            </ul>
+            <div class="project-links">
+              {project.data.links.map((link) => <a href={link.href}>{link.label}</a>)}
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>
