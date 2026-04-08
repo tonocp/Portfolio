@@ -14,7 +14,7 @@ links:
     href: "https://mapas-app-tcp.netlify.app/"
 featured: true
 order: 2
-cover: "/img/webp/mapsApp.webp"
+cover: "/img/mapsApp.webp"
 theme: "ice"
 ---
 

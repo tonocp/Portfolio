@@ -12,7 +12,7 @@ links:
     href: "https://indecision-tcp.netlify.app/"
 featured: false
 order: 11
-cover: "/img/webp/indecisionApp.webp"
+cover: "/img/indecisionApp.webp"
 theme: "coral"
 ---
 

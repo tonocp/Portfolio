@@ -13,7 +13,7 @@ links:
     href: "https://bar-armando-tcp.netlify.app/"
 featured: false
 order: 17
-cover: "/img/webp/barArmando.webp"
+cover: "/img/barArmando.webp"
 theme: "mint"
 ---
 

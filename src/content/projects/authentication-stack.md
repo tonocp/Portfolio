@@ -14,7 +14,7 @@ links:
     href: "https://auth-app-tcp.herokuapp.com/"
 featured: true
 order: 1
-cover: "/img/webp/authApp.webp"
+cover: "/img/authApp.webp"
 theme: "amber"
 ---
 

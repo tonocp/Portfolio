@@ -12,7 +12,7 @@ links:
     href: "https://graficas-tcp.herokuapp.com/"
 featured: false
 order: 16
-cover: "/img/webp/graficosApp.webp"
+cover: "/img/graficosApp.webp"
 theme: "coral"
 ---
 

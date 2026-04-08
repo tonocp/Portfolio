@@ -13,7 +13,7 @@ links:
     href: "https://pokemon-tcp.netlify.app/"
 featured: true
 order: 3
-cover: "/img/webp/pokemonApp.webp"
+cover: "/img/pokemonApp.webp"
 theme: "coral"
 ---
 

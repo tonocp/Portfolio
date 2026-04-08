@@ -12,7 +12,7 @@ links:
     href: "https://pipes-app-tcp.netlify.app/"
 featured: false
 order: 14
-cover: "/img/webp/pipesApp.webp"
+cover: "/img/pipesApp.webp"
 theme: "amber"
 ---
 

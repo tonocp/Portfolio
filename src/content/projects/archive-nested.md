@@ -12,7 +12,7 @@ links:
     href: "https://nested-selectors-tcp.netlify.app/"
 featured: false
 order: 15
-cover: "/img/webp/nestedApp.webp"
+cover: "/img/nestedApp.webp"
 theme: "ice"
 ---
 
