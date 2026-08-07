@@ -26,9 +26,9 @@ export const siteContent = {
   about: {
     title: "Distinto oficio, misma disciplina.",
     body: [
-      "Antes de dedicarme al software, pasé <b>más de 15 años como electromecánico</b> en el sector de la automoción. Ese oficio me enseñó una forma de trabajar muy concreta: diagnosticar antes de actuar, entender el sistema completo antes de tocar una pieza, y no dar nada por resuelto hasta comprobarlo.",
-      "Es el mismo enfoque que aplico hoy a la ingeniería de software: entender bien el problema, antes de escribir la primera línea de código.",
-      "En producción, he corregido y refactorizado sistemas críticos —incluyendo el sistema de mensajería ICARS de un aeropuerto, para un cliente del sector de la aviación— y liderado proyectos de IoT en la industria del vino en mi tierra natal, La Rioja. Ahora mismo dirijo un equipo pequeño en un proyecto para una marca de equipos de protección individual; ya mentorizaba en el taller, y sigo haciéndolo hoy, como ingeniero de software senior."
+      "Durante más de <b>15 años fui electromecánico</b>. Aprendí a no cambiar una pieza sin entender antes el sistema completo, a diagnosticar antes de actuar y a comprobar cada solución antes de dar el trabajo por terminado.",
+      "<b>Cambié las herramientas, no la forma de trabajar.</b>",
+      "Hoy aplico esa misma disciplina a la ingeniería de software. Me gusta entender sistemas complejos, encontrar la causa real de los problemas y mejorar software que ya está en producción. He corregido y refactorizado software para el sector de la aviación, liderado proyectos de IoT para la industria vitivinícola en La Rioja y actualmente lidero técnicamente un pequeño equipo como senior software engineer."
     ]
   },
   capabilities: {
@@ -63,7 +63,7 @@ export const siteContent = {
   },
   contact: {
     title: "Hablemos",
-    body: "Si buscas un perfil como este para tu equipo, aquí me encuentras.",
+    body: "Si este perfil encaja con lo que necesitas, hablemos.",
     links: [
       { label: "GitHub", href: "https://github.com/tonocp" },
       { label: "LinkedIn", href: "https://www.linkedin.com/in/tcarrascosa" },
