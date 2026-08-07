@@ -17,9 +17,10 @@ const projects = (await getCollection("projects"))
 <BaseLayout title={siteContent.seo.title} description={siteContent.seo.description}>
   <header class="topbar">
     <div class="shell topbar-inner">
-      <a class="brand" href="#inicio">Toño Carrascosa</a>
+      <a class="brand" href="#home">TCarrascosa.dev</a>
       <nav aria-label="Principal">
         <a href="#sobre-mi">Sobre mí</a>
+        <a href="#stack">Stack</a>
         <a href="#proyectos">Proyectos</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -27,7 +28,7 @@ const projects = (await getCollection("projects"))
   </header>
 
   <main>
-    <div id="inicio" class="anchor-target" aria-hidden="true"></div>
+    <div id="home" class="anchor-target" aria-hidden="true"></div>
     <HeroSection
       eyebrow={siteContent.hero.eyebrow}
       title={siteContent.hero.title}
@@ -38,13 +39,14 @@ const projects = (await getCollection("projects"))
     />
     <div id="sobre-mi" class="anchor-target" aria-hidden="true"></div>
     <AboutSection title={siteContent.about.title} body={siteContent.about.body} />
-    <div id="proyectos" class="anchor-target" aria-hidden="true"></div>
-    <ProjectsSection projects={projects} />
+    <div id="stack" class="anchor-target" aria-hidden="true"></div>
     <CapabilitiesSection
       title={siteContent.capabilities.title}
       items={siteContent.capabilities.items}
       stack={siteContent.capabilities.stack}
     />
+    <div id="proyectos" class="anchor-target" aria-hidden="true"></div>
+    <ProjectsSection projects={projects} />
     <div id="contacto" class="anchor-target" aria-hidden="true"></div>
     <ContactSection
       title={siteContent.contact.title}

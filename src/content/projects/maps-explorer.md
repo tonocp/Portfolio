@@ -1,13 +1,13 @@
 ---
 title: "Mapas con MapBox API"
-tagline: "Interacción geográfica, consumo de API externa y experiencia visual orientada a exploración."
+tagline: "Exploración geográfica con la API de MapBox."
 year: 2022
 stack:
   - "Angular"
   - "TypeScript"
   - "MapBox"
   - "RxJS"
-summary: "Proyecto centrado en mapas e integración con MapBox para trabajar visualización, búsqueda y una interfaz más dinámica basada en datos geográficos."
+summary: "Mapas interactivos con búsqueda y visualización de datos geográficos."
 role: "Frontend"
 links:
   - label: "Ver proyecto"
@@ -18,4 +18,4 @@ cover: "/img/mapsApp.webp"
 theme: "ice"
 ---
 
-Una pieza interesante para enseñar integración con APIs visuales y construcción de interfaces con feedback inmediato.
+Integración con una API visual y una interfaz con feedback inmediato.

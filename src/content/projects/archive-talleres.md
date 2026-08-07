@@ -1,11 +1,11 @@
 ---
 title: "Joomla Talleres Carrascosa"
-tagline: "Presencia web sobre CMS para un negocio real."
+tagline: "Web corporativa construida con Joomla."
 year: 2020
 stack:
   - "Joomla"
   - "CMS"
-summary: "Proyecto corporativo orientado a información y visibilidad online."
+summary: "Presencia online para un negocio real."
 role: "Web development"
 links:
   - label: "Ver proyecto"

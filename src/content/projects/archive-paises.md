@@ -1,11 +1,11 @@
 ---
 title: "Países con RESTCountries API"
-tagline: "Exploración de datos y navegación a partir de una API pública."
+tagline: "Exploración de países con la API de RESTCountries."
 year: 2022
 stack:
   - "Angular"
   - "RESTCountries API"
-summary: "Aplicación de consulta y navegación sobre datos de países."
+summary: "Consulta y navegación sobre datos de países."
 role: "Frontend"
 links:
   - label: "Ver proyecto"

@@ -1,11 +1,11 @@
 ---
 title: "Selectores Anidados"
-tagline: "Trabajo de navegación dependiente y selección encadenada en interfaz."
+tagline: "Selectores dependientes y navegación encadenada."
 year: 2022
 stack:
   - "Angular"
   - "TypeScript"
-summary: "Aplicación para explorar selectores anidados y gestión de estado entre vistas."
+summary: "Selectores anidados y gestión de estado entre vistas."
 role: "Frontend"
 links:
   - label: "Ver proyecto"

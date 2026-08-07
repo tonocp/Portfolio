@@ -1,13 +1,13 @@
 ---
 title: "MEAN CRUD SuperHeroes"
-tagline: "CRUD completo con enfoque didáctico sobre operaciones y estructura MEAN."
+tagline: "CRUD completo sobre stack MEAN."
 year: 2021
 stack:
   - "MongoDB"
   - "Express"
   - "Angular"
   - "Node.js"
-summary: "Aplicación CRUD para trabajar operaciones completas y estructura full stack."
+summary: "Operaciones CRUD completas en una estructura full stack."
 role: "Full stack"
 links:
   - label: "Ver proyecto"

@@ -1,14 +1,13 @@
 export const siteContent = {
   seo: {
-    title: "Toño Carrascosa | Software Engineer",
-    description:
-      "Portfolio personal de Toño Carrascosa. Diseño y desarrollo de experiencias web con foco en producto, claridad y ejecución full stack."
+    title: "Toño Carrascosa Prieto | Senior Software Engineer",
+    description: "Portfolio de Toño Carrascosa Prieto, Senior Software Engineer - Fullstack Developer."
   },
   hero: {
-    eyebrow: "Portfolio 2026",
-    title: "Construyo productos web con criterio técnico y sensibilidad visual.",
+    eyebrow: "Senior Software Engineer",
+    title: "Toño Carrascosa Prieto",
     intro:
-      "Soy Toño Carrascosa, software engineer. Me gusta transformar ideas en interfaces rápidas, sistemas mantenibles y experiencias que se sienten cuidadas de verdad.",
+      "Diseño, construyo y despliego software de principio a fin, poniendo el foco en la calidad, la seguridad y el rendimiento en cada etapa del desarrollo.",
     primaryCta: {
       label: "Ver proyectos",
       href: "#proyectos"
@@ -18,32 +17,34 @@ export const siteContent = {
       href: "#contacto"
     },
     metrics: [
-      { value: "10+", label: "proyectos publicados" },
-      { value: "Full stack", label: "de frontend a backend" },
-      { value: "Producto", label: "pensado para personas reales" }
+      { value: "5+ años", label: "Experiencia" },
+      { value: "Fullstack · DevOps", label: "Stack Tecnológico" },
+      { value: "Logroño · La Rioja\nRemoto · Híbrido", label: "Ubicación" },
+      { value: "Español · Nativo\nInglés · B2", label: "Idiomas" }
     ]
   },
   about: {
-    title: "Ingeniería, diseño y delivery en la misma conversación.",
+    title: "Distinto oficio, misma disciplina.",
     body: [
-      "Trabajo cómodo entre frontend, backend y arquitectura. Me interesa que cada decisión técnica mejore también el resultado visual, el rendimiento y la mantenibilidad.",
-      "He construido aplicaciones con Angular, Vue, TypeScript, Java, Spring y APIs de terceros. En esta nueva etapa del portfolio priorizo enseñar mejor el criterio detrás del trabajo, no solo listar tecnologías."
+      "Antes de dedicarme al software, pasé <b>más de 15 años como electromecánico</b> en el sector de la automoción. Ese oficio me enseñó una forma de trabajar muy concreta: diagnosticar antes de actuar, entender el sistema completo antes de tocar una pieza, y no dar nada por resuelto hasta comprobarlo.",
+      "Es el mismo enfoque que aplico hoy a la ingeniería de software: entender bien el problema, antes de escribir la primera línea de código.",
+      "En producción, he corregido y refactorizado sistemas críticos —incluyendo el sistema de mensajería ICARS de un aeropuerto, para un cliente del sector de la aviación— y liderado proyectos de IoT en la industria del vino en mi tierra natal, La Rioja. Ahora mismo dirijo un equipo pequeño en un proyecto para una marca de equipos de protección individual; ya mentorizaba en el taller, y sigo haciéndolo hoy, como ingeniero de software senior."
     ]
   },
   capabilities: {
-    title: "Lo que aporto",
+    title: "Stack y competencias",
     items: [
       {
-        title: "Frontend con intención",
-        description: "Interfaces claras, responsive y con una dirección visual consistente."
+        title: "Frontend",
+        description: "Interfaces claras y responsive."
       },
       {
-        title: "Arquitectura pragmática",
-        description: "Código modular, tipado y fácil de evolucionar sin sobreingeniería."
+        title: "Backend y arquitectura",
+        description: "Código modular y fácil de mantener."
       },
       {
-        title: "Entrega end to end",
-        description: "Desde el modelado de datos hasta la última interacción visible."
+        title: "Ingeniería con IA",
+        description: "Uso agentes de IA (Claude Code, Codex) en mi trabajo diario."
       }
     ],
     stack: [
@@ -62,8 +63,7 @@ export const siteContent = {
   },
   contact: {
     title: "Hablemos",
-    body:
-      "Si estás montando un producto, renovando una experiencia digital o necesitas a alguien que combine ejecución y criterio, aquí me encuentras.",
+    body: "Si buscas un perfil como este para tu equipo, aquí me encuentras.",
     links: [
       { label: "GitHub", href: "https://github.com/tonocp" },
       { label: "LinkedIn", href: "https://www.linkedin.com/in/tcarrascosa" },

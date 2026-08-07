@@ -1,12 +1,12 @@
 ---
 title: "Pokemon Game"
-tagline: "Juego ligero construido con Vue para explorar estado, interacción y ritmo visual."
+tagline: "Juego ligero construido con Vue."
 year: 2022
 stack:
   - "Vue"
   - "TypeScript"
   - "Pinia"
-summary: "Una aplicación con tono más lúdico que me permitió trabajar mecánicas de interacción, gestión de estado y claridad en componentes."
+summary: "Un proyecto lúdico para trabajar gestión de estado y componentes claros."
 role: "Frontend"
 links:
   - label: "Ver proyecto"
@@ -17,4 +17,4 @@ cover: "/img/pokemonApp.webp"
 theme: "coral"
 ---
 
-Muestra cómo convertir una idea pequeña en una experiencia cuidada, rápida y fácil de entender.
+Una idea pequeña convertida en una experiencia cuidada y rápida.

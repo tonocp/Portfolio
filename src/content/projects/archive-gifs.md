@@ -1,12 +1,12 @@
 ---
 title: "GIFs con GIPHY API"
-tagline: "Búsqueda y renderizado de contenido usando integración con terceros."
+tagline: "Búsqueda de GIFs con la API de GIPHY."
 year: 2022
 stack:
   - "Angular"
   - "TypeScript"
   - "GIPHY API"
-summary: "Proyecto centrado en búsqueda y gestión de resultados."
+summary: "Búsqueda y gestión de resultados."
 role: "Frontend"
 links:
   - label: "Ver proyecto"

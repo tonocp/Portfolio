@@ -13,6 +13,6 @@ const { title, body } = Astro.props;
     <h2>{title}</h2>
   </div>
   <div class="section-body prose">
-    {body.map((paragraph) => <p>{paragraph}</p>)}
+    {body.map((paragraph) => <p set:html={paragraph} />)}
   </div>
 </section>

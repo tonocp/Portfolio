@@ -1,11 +1,11 @@
 ---
 title: "Indecisión con YesNo.wtf API"
-tagline: "Consumo de API externa con una experiencia ligera y simpática."
+tagline: "Una app ligera que consume la API de YesNo.wtf."
 year: 2022
 stack:
   - "Vue"
   - "API REST"
-summary: "Proyecto orientado a consumo de API y renderizado reactivo."
+summary: "Consumo de API y renderizado reactivo."
 role: "Frontend"
 links:
   - label: "Ver proyecto"

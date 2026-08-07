@@ -1,11 +1,11 @@
 ---
 title: "Gráficos con Ng2-Charts"
-tagline: "Representación visual de datos con librerías de gráficos."
+tagline: "Visualización de datos con Ng2-Charts."
 year: 2022
 stack:
   - "Angular"
   - "Ng2-Charts"
-summary: "Proyecto de visualización con gráficos para trabajar lectura rápida de información."
+summary: "Gráficos para una lectura rápida de la información."
 role: "Frontend"
 links:
   - label: "Ver proyecto"

@@ -1,12 +1,12 @@
 ---
 title: "Gasolins"
-tagline: "Aplicación web para consultar información útil de forma directa y utilitaria."
+tagline: "Consulta rápida y directa de información útil."
 year: 2021
 stack:
   - "HTML"
   - "CSS"
   - "JavaScript"
-summary: "Proyecto ligero orientado a resolver una necesidad concreta con una interfaz sencilla, rápida y centrada en la utilidad del dato."
+summary: "Interfaz sencilla y rápida, centrada en resolver una necesidad concreta."
 role: "Frontend"
 links:
   - label: "Ver proyecto"
@@ -17,4 +17,4 @@ cover: "/img/gasolins.webp"
 theme: "mint"
 ---
 
-Una muestra de enfoque pragmático: menos artificio y más claridad para consultar información relevante.
+Menos artificio, más claridad: justo lo necesario para consultar el dato.

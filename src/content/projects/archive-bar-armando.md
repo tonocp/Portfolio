@@ -1,12 +1,12 @@
 ---
 title: "Bar Armando"
-tagline: "Web promocional con base clásica de HTML, CSS y JavaScript."
+tagline: "Web promocional en HTML, CSS y JavaScript."
 year: 2021
 stack:
   - "HTML"
   - "CSS"
   - "JavaScript"
-summary: "Sitio orientado a presencia digital y claridad de contenido."
+summary: "Presencia digital sencilla y clara."
 role: "Frontend"
 links:
   - label: "Ver proyecto"
