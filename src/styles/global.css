@@ -36,7 +36,7 @@ body {
     radial-gradient(circle at 80% 20%, rgba(244, 184, 96, 0.16), transparent 24%),
     linear-gradient(180deg, #08111d 0%, #07111f 45%, #040a13 100%);
   font-family: "DM Sans", "Segoe UI", sans-serif;
-  line-height: 1.5;
+  line-height: 1.65;
 }
 
 body::before {
@@ -71,7 +71,7 @@ main {
 }
 
 .section {
-  padding: 4rem 0;
+  padding: 7rem 0;
 }
 
 .anchor-target {
@@ -515,17 +515,18 @@ h3 {
   white-space: nowrap;
 }
 
-.stack-principal-label {
-  margin-top: 2rem;
-  margin-bottom: 0.85rem;
+.stack-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.capability-grid + .stack-block {
+  margin-top: 2.5rem;
 }
 
 .stack-cloud-principal {
   gap: 1rem;
-}
-
-.stack-secondary-label {
-  margin-top: 1.5rem;
 }
 
 .stack-groups {
@@ -534,8 +535,14 @@ h3 {
   gap: 1.5rem 2.5rem;
 }
 
+.stack-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
 .stack-group-label {
-  margin: 0 0 0.6rem;
+  margin: 0;
   color: var(--muted);
   font-size: 0.82rem;
   letter-spacing: 0.1em;
@@ -576,7 +583,7 @@ h3 {
 
 .capabilities {
   display: grid;
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
 
 .capability-grid {
@@ -629,7 +636,7 @@ h3 {
   }
 
   .section {
-    padding: 3rem 0;
+    padding: 5rem 0;
   }
 
   .project-content,

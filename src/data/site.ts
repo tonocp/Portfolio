@@ -127,28 +127,29 @@ const es: SiteContent = {
   },
   capabilities: {
     eyebrow: "Stack",
-    title: "Tecnologías y forma de trabajar",
+    title: "Cómo trabajo",
     lead: "Full stack equilibrado, centrado en construir un producto efectivo y fiable en cada etapa.",
     items: [
       {
-        title: "Frontend",
-        description: "Interfaces rápidas, accesibles y responsive, con foco en experiencia de usuario."
+        title: "Frontend & Mobile",
+        description:
+          "Interfaces centradas en el usuario para web y aplicaciones móviles, con foco en accesibilidad, usabilidad y visión de producto."
       },
       {
         title: "Backend & Arquitectura",
-        description: "APIs escalables y arquitectura limpia para aplicaciones mantenibles."
+        description: "Arquitectura hexagonal y Domain-Driven Design para construir backends desacoplados, testables y fáciles de evolucionar con el tiempo."
       },
       {
         title: "DevOps & CI/CD",
-        description: "CI/CD, automatización y despliegues continuos."
+        description: "CI/CD y automatización de despliegues dentro de un flujo ágil (Scrum), orientado a entregas continuas e iterativas."
       },
       {
         title: "IA aplicada al desarrollo",
         description:
-          "Diseño mis propios agentes y herramientas de IA, aplicando desarrollo guiado por especificaciones y TDD para entregar features con tests unitarios, de integración y end-to-end."
+          "Diseño mis propios agentes y herramientas de IA, con desarrollo guiado por especificaciones, TDD y tests automatizados en cada feature."
       }
     ],
-    stackPrincipalLabel: "Stack actual",
+    stackPrincipalLabel: "Actualmente trabajo con",
     stackPrincipal: ["Java", "Spring Boot", "Vue", "Capacitor", "PostgreSQL", "GitLab CI", "Docker", "Claude", "Codex"],
     stackSecondaryLabel: "También he trabajado con",
     stackGroups: [
@@ -229,28 +230,29 @@ const en: SiteContent = {
   },
   capabilities: {
     eyebrow: "Stack",
-    title: "Technologies and how I work",
+    title: "How I work",
     lead: "A balanced full stack developer, focused on building an effective, reliable product at every stage.",
     items: [
       {
-        title: "Frontend",
-        description: "Fast, accessible, responsive interfaces, focused on user experience."
+        title: "Frontend & Mobile",
+        description:
+          "User-centered interfaces for web and mobile apps, with a focus on accessibility, usability, and product vision."
       },
       {
         title: "Backend & Architecture",
-        description: "Scalable APIs and clean architecture for maintainable applications."
+        description: "Hexagonal architecture and Domain-Driven Design to build decoupled, testable backends that are easy to evolve over time."
       },
       {
         title: "DevOps & CI/CD",
-        description: "CI/CD, automation, and continuous deployments."
+        description: "CI/CD and deployment automation within an agile workflow (Scrum), geared toward continuous, iterative delivery."
       },
       {
         title: "AI-assisted development",
         description:
-          "I design my own AI agents and tools, applying spec-driven development and TDD to ship features backed by unit, integration, and end-to-end tests."
+          "I design my own AI agents and tools, with spec-driven development, TDD, and automated tests for every feature."
       }
     ],
-    stackPrincipalLabel: "Current stack",
+    stackPrincipalLabel: "Currently working with",
     stackPrincipal: ["Java", "Spring Boot", "Vue", "Capacitor", "PostgreSQL", "GitLab CI", "Docker", "Claude", "Codex"],
     stackSecondaryLabel: "Also worked with",
     stackGroups: [
