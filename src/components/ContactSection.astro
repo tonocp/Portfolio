@@ -5,18 +5,19 @@ interface Link {
 }
 
 interface Props {
+  eyebrow: string;
   title: string;
   body: string;
   links: readonly Link[];
 }
 
-const { title, body, links } = Astro.props;
+const { eyebrow, title, body, links } = Astro.props;
 ---
 
 <section class="section shell contact-section">
   <div class="contact-card">
     <div class="section-heading">
-      <p class="eyebrow">Contacto</p>
+      <p class="eyebrow">{eyebrow}</p>
       <h2>{title}</h2>
     </div>
     <p class="section-lead">{body}</p>

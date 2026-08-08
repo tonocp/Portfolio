@@ -131,6 +131,17 @@ main {
   transform: translateY(-1px);
 }
 
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.lang-switch a[aria-current="page"] {
+  color: var(--text);
+  font-weight: 700;
+}
+
 .eyebrow,
 .panel-kicker {
   margin: 0;

@@ -17,17 +17,22 @@ interface Project {
 }
 
 interface Props {
+  eyebrow: string;
+  heading: string;
+  lead: string;
+  coverAltPrefix: string;
+  stackAriaLabelPrefix: string;
   projects: Project[];
 }
 
-const { projects } = Astro.props;
+const { eyebrow, heading, lead, coverAltPrefix, stackAriaLabelPrefix, projects } = Astro.props;
 ---
 
 <section class="section shell">
   <div class="section-heading projects-heading">
-    <p class="eyebrow">Proyectos</p>
-    <h2>Proyectos seleccionados.</h2>
-    <p class="section-lead">Trabajos que muestran cómo pienso y cómo construyo.</p>
+    <p class="eyebrow">{eyebrow}</p>
+    <h2>{heading}</h2>
+    <p class="section-lead">{lead}</p>
   </div>
 
   <div class="projects-grid">
@@ -35,7 +40,7 @@ const { projects } = Astro.props;
       projects.map((project) => (
         <article class={`project-card theme-${project.data.theme}`}>
           <div class="project-media">
-            <img src={project.data.cover} alt={`Captura de ${project.data.title}`} loading="lazy" />
+            <img src={project.data.cover} alt={`${coverAltPrefix} ${project.data.title}`} loading="lazy" />
           </div>
           <div class="project-content">
             <div class="project-meta">
@@ -45,7 +50,7 @@ const { projects } = Astro.props;
             <h3>{project.data.title}</h3>
             <p class="project-tagline">{project.data.tagline}</p>
             <p class="project-summary">{project.data.summary}</p>
-            <ul class="stack-list" aria-label={`Tecnologías usadas en ${project.data.title}`}>
+            <ul class="stack-list" aria-label={`${stackAriaLabelPrefix} ${project.data.title}`}>
               {project.data.stack.map((item) => <li>{item}</li>)}
             </ul>
             <div class="project-links">

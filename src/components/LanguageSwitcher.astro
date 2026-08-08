@@ -1,0 +1,19 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+import type { Locale } from "../data/site";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const esHref = getRelativeLocaleUrl("es", "/");
+const enHref = getRelativeLocaleUrl("en", "/");
+---
+
+<div class="lang-switch">
+  <a href={esHref} aria-current={locale === "es" ? "page" : undefined}>ES</a>
+  <span aria-hidden="true">·</span>
+  <a href={enHref} aria-current={locale === "en" ? "page" : undefined}>EN</a>
+</div>

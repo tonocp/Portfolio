@@ -5,17 +5,19 @@ interface Capability {
 }
 
 interface Props {
+  eyebrow: string;
   title: string;
   items: readonly Capability[];
   stack: readonly string[];
+  stackAriaLabel: string;
 }
 
-const { title, items, stack } = Astro.props;
+const { eyebrow, title, items, stack, stackAriaLabel } = Astro.props;
 ---
 
 <section class="section shell capabilities">
   <div class="section-heading">
-    <p class="eyebrow">Stack</p>
+    <p class="eyebrow">{eyebrow}</p>
     <h2>{title}</h2>
   </div>
 
@@ -30,7 +32,7 @@ const { title, items, stack } = Astro.props;
     }
   </div>
 
-  <ul class="stack-cloud" aria-label="Stack principal">
+  <ul class="stack-cloud" aria-label={stackAriaLabel}>
     {stack.map((item) => <li>{item}</li>)}
   </ul>
 </section>

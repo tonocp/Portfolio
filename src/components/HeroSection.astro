@@ -16,9 +16,12 @@ interface Props {
   primaryCta: Action;
   secondaryCta: Action;
   metrics: readonly Metric[];
+  metricsAriaLabel: string;
+  nowKicker: string;
+  nowText: string;
 }
 
-const { eyebrow, title, intro, primaryCta, secondaryCta, metrics } = Astro.props;
+const { eyebrow, title, intro, primaryCta, secondaryCta, metrics, metricsAriaLabel, nowKicker, nowText } = Astro.props;
 ---
 
 <section class="hero section shell">
@@ -33,7 +36,7 @@ const { eyebrow, title, intro, primaryCta, secondaryCta, metrics } = Astro.props
   </div>
 
   <div class="hero-panel">
-    <ul class="metric-grid" aria-label="Ficha rápida">
+    <ul class="metric-grid" aria-label={metricsAriaLabel}>
       {
         metrics.map((metric) => (
           <li class="metric-card">
@@ -43,10 +46,10 @@ const { eyebrow, title, intro, primaryCta, secondaryCta, metrics } = Astro.props
         ))
       }
     </ul>
-    <p class="panel-kicker signal-kicker">Ahora mismo</p>
+    <p class="panel-kicker signal-kicker">{nowKicker}</p>
     <div class="signal-card">
       <span class="signal-dot" aria-hidden="true"></span>
-      <p>Siempre aprendiendo algo nuevo y abierto a nuevos retos profesionales.</p>
+      <p>{nowText}</p>
     </div>
   </div>
 </section>
