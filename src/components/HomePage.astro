@@ -55,9 +55,13 @@ const projects = (await getCollection("projects"))
     <CapabilitiesSection
       eyebrow={t.capabilities.eyebrow}
       title={t.capabilities.title}
+      lead={t.capabilities.lead}
       items={t.capabilities.items}
-      stack={t.capabilities.stack}
-      stackAriaLabel={t.capabilities.stackAriaLabel}
+      stackPrincipalLabel={t.capabilities.stackPrincipalLabel}
+      stackPrincipal={t.capabilities.stackPrincipal}
+      stackSecondaryLabel={t.capabilities.stackSecondaryLabel}
+      stackGroups={t.capabilities.stackGroups}
+      stackAriaLabelPrefix={t.capabilities.stackAriaLabelPrefix}
     />
     <div id="proyectos" class="anchor-target" aria-hidden="true"></div>
     <ProjectsSection

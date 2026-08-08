@@ -1,0 +1,101 @@
+---
+import {
+  siAngular,
+  siAstro,
+  siCapacitor,
+  siClaude,
+  siDocker,
+  siFastapi,
+  siGithubactions,
+  siGitlab,
+  siKubernetes,
+  siMongodb,
+  siMysql,
+  siNestjs,
+  siNodedotjs,
+  siOpenjdk,
+  siPostgresql,
+  siPython,
+  siRabbitmq,
+  siRaspberrypi,
+  siSpringboot,
+  siTypescript,
+  siVuedotjs
+} from "simple-icons";
+
+interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+
+const stackIcons: Record<string, { path: string; hex: string }> = {
+  TypeScript: siTypescript,
+  Astro: siAstro,
+  Angular: siAngular,
+  Vue: siVuedotjs,
+  Capacitor: siCapacitor,
+  Java: siOpenjdk,
+  "Spring Boot": siSpringboot,
+  "Node.js": siNodedotjs,
+  NestJS: siNestjs,
+  Python: siPython,
+  FastAPI: siFastapi,
+  PostgreSQL: siPostgresql,
+  MySQL: siMysql,
+  MongoDB: siMongodb,
+  Docker: siDocker,
+  Kubernetes: siKubernetes,
+  "GitLab CI": siGitlab,
+  "GitHub Actions": siGithubactions,
+  RabbitMQ: siRabbitmq,
+  "Raspberry Pi": siRaspberrypi,
+  Claude: siClaude
+};
+
+// Some official brand colors (e.g. Angular's near-black rebrand, OpenJDK's pure black)
+// are invisible on our dark background — fall back to the default text color for those.
+function iconColorFor(hex: string): string | undefined {
+  const r = parseInt(hex.slice(0, 2), 16);
+  const g = parseInt(hex.slice(2, 4), 16);
+  const b = parseInt(hex.slice(4, 6), 16);
+  const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+  return luminance < 0.15 ? undefined : `#${hex}`;
+}
+
+// Angular's official flat brand color (#0F0F11) is unreadable on a dark background.
+// Their gradient identity (red → pink → purple) isn't published anywhere we can verify
+// exactly, so this is an approximation, not a pixel-perfect match to the official asset.
+const stackGradients: Record<string, [string, string, string]> = {
+  Angular: ["#E40035", "#FA1147", "#C822FF"]
+};
+
+const icon = stackIcons[name];
+const gradient = stackGradients[name];
+const color = icon && !gradient ? iconColorFor(icon.hex) : undefined;
+const gradientId = gradient ? `stack-gradient-${name.toLowerCase().replace(/[^a-z0-9]/g, "")}` : undefined;
+---
+
+{
+  icon ? (
+    <li title={name} tabindex="0" style={color ? `--icon-color: ${color}` : undefined}>
+      <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+        {gradient && gradientId ? (
+          <defs>
+            <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color={gradient[0]} />
+              <stop offset="50%" stop-color={gradient[1]} />
+              <stop offset="100%" stop-color={gradient[2]} />
+            </linearGradient>
+          </defs>
+        ) : null}
+        <path d={icon.path} fill={gradientId ? `url(#${gradientId})` : undefined} />
+      </svg>
+      <span class="visually-hidden">{name}</span>
+    </li>
+  ) : (
+    <li class="stack-cloud-text" title={name}>
+      {name}
+    </li>
+  )
+}

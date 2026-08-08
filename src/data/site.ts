@@ -55,9 +55,13 @@ interface SiteContent {
   capabilities: {
     eyebrow: string;
     title: string;
+    lead: string;
     items: readonly Capability[];
-    stack: readonly string[];
-    stackAriaLabel: string;
+    stackPrincipalLabel: string;
+    stackPrincipal: readonly string[];
+    stackSecondaryLabel: string;
+    stackGroups: readonly { label: string; items: readonly string[] }[];
+    stackAriaLabelPrefix: string;
   };
   projects: {
     eyebrow: string;
@@ -123,23 +127,38 @@ const es: SiteContent = {
   },
   capabilities: {
     eyebrow: "Stack",
-    title: "Stack y competencias",
+    title: "Tecnologías y forma de trabajar",
+    lead: "Full stack equilibrado, centrado en construir un producto efectivo y fiable en cada etapa.",
     items: [
       {
         title: "Frontend",
-        description: "Interfaces claras y responsive."
+        description: "Interfaces rápidas, accesibles y responsive, con foco en experiencia de usuario."
       },
       {
-        title: "Backend y arquitectura",
-        description: "Código modular y fácil de mantener."
+        title: "Backend & Arquitectura",
+        description: "APIs escalables y arquitectura limpia para aplicaciones mantenibles."
       },
       {
-        title: "Ingeniería con IA",
-        description: "Uso agentes de IA (Claude Code, Codex) en mi trabajo diario."
+        title: "DevOps & CI/CD",
+        description: "CI/CD, automatización y despliegues continuos."
+      },
+      {
+        title: "IA aplicada al desarrollo",
+        description:
+          "Diseño mis propios agentes y herramientas de IA, aplicando desarrollo guiado por especificaciones y TDD para entregar features con tests unitarios, de integración y end-to-end."
       }
     ],
-    stack: ["TypeScript", "Astro", "Angular", "Vue", "Java", "Spring", "Node.js", "APIs REST", "SQL", "MongoDB", "Docker"],
-    stackAriaLabel: "Stack principal"
+    stackPrincipalLabel: "Stack actual",
+    stackPrincipal: ["Java", "Spring Boot", "Vue", "Capacitor", "PostgreSQL", "GitLab CI", "Docker", "Claude", "Codex"],
+    stackSecondaryLabel: "También he trabajado con",
+    stackGroups: [
+      { label: "Frontend", items: ["TypeScript", "Angular", "Astro"] },
+      { label: "Backend", items: ["Node.js", "NestJS", "Python", "FastAPI"] },
+      { label: "Datos", items: ["MySQL", "MongoDB"] },
+      { label: "DevOps & CI/CD", items: ["Kubernetes", "GitHub Actions"] },
+      { label: "IoT", items: ["RabbitMQ", "FIWARE", "Raspberry Pi"] }
+    ],
+    stackAriaLabelPrefix: "Tecnologías de"
   },
   projects: {
     eyebrow: "Proyectos",
@@ -210,23 +229,38 @@ const en: SiteContent = {
   },
   capabilities: {
     eyebrow: "Stack",
-    title: "Stack & skills",
+    title: "Technologies and how I work",
+    lead: "A balanced full stack developer, focused on building an effective, reliable product at every stage.",
     items: [
       {
         title: "Frontend",
-        description: "Clear, responsive interfaces."
+        description: "Fast, accessible, responsive interfaces, focused on user experience."
       },
       {
-        title: "Backend & architecture",
-        description: "Modular code that's easy to maintain."
+        title: "Backend & Architecture",
+        description: "Scalable APIs and clean architecture for maintainable applications."
       },
       {
-        title: "AI-assisted engineering",
-        description: "I use AI agents (Claude Code, Codex) in my daily work."
+        title: "DevOps & CI/CD",
+        description: "CI/CD, automation, and continuous deployments."
+      },
+      {
+        title: "AI-assisted development",
+        description:
+          "I design my own AI agents and tools, applying spec-driven development and TDD to ship features backed by unit, integration, and end-to-end tests."
       }
     ],
-    stack: ["TypeScript", "Astro", "Angular", "Vue", "Java", "Spring", "Node.js", "REST APIs", "SQL", "MongoDB", "Docker"],
-    stackAriaLabel: "Main stack"
+    stackPrincipalLabel: "Current stack",
+    stackPrincipal: ["Java", "Spring Boot", "Vue", "Capacitor", "PostgreSQL", "GitLab CI", "Docker", "Claude", "Codex"],
+    stackSecondaryLabel: "Also worked with",
+    stackGroups: [
+      { label: "Frontend", items: ["TypeScript", "Angular", "Astro"] },
+      { label: "Backend", items: ["Node.js", "NestJS", "Python", "FastAPI"] },
+      { label: "Data", items: ["MySQL", "MongoDB"] },
+      { label: "DevOps & CI/CD", items: ["Kubernetes", "GitHub Actions"] },
+      { label: "IoT", items: ["RabbitMQ", "FIWARE", "Raspberry Pi"] }
+    ],
+    stackAriaLabelPrefix: "Technologies used in"
   },
   projects: {
     eyebrow: "Projects",

@@ -196,7 +196,6 @@ h3 {
 .hero-copy,
 .hero-panel,
 .project-card,
-.capability-card,
 .contact-card {
   position: relative;
   overflow: hidden;
@@ -313,8 +312,7 @@ h3 {
   gap: 1.5rem 2rem;
 }
 
-.signal-card,
-.capability-card {
+.signal-card {
   padding: 1.1rem;
   border-radius: 1.25rem;
   background: rgba(255, 255, 255, 0.04);
@@ -431,14 +429,129 @@ h3 {
   gap: 0.75rem;
 }
 
-.stack-list li,
-.stack-cloud li {
+.stack-list li {
   padding: 0.55rem 0.9rem;
   border-radius: var(--radius-sm);
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.04);
   color: var(--text);
   font-size: 0.92rem;
+}
+
+.stack-cloud li {
+  --icon-color: var(--text);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--icon-color);
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.stack-cloud-principal li {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
+.stack-cloud-principal svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.stack-cloud li:hover,
+.stack-cloud li:focus-visible {
+  border-color: currentColor;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.stack-cloud li:not(.stack-cloud-text)::after {
+  content: attr(title);
+  position: absolute;
+  bottom: calc(100% + 0.6rem);
+  left: 50%;
+  padding: 0.35rem 0.65rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--line);
+  background: var(--panel-strong);
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 4px);
+  transition:
+    opacity 150ms ease,
+    transform 150ms ease;
+}
+
+.stack-cloud li:hover::after,
+.stack-cloud li:focus-visible::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.stack-cloud svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+}
+
+.stack-cloud-text {
+  width: auto;
+  padding: 0 0.9rem;
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.stack-principal-label {
+  margin-top: 2rem;
+  margin-bottom: 0.85rem;
+}
+
+.stack-cloud-principal {
+  gap: 1rem;
+}
+
+.stack-secondary-label {
+  margin-top: 1.5rem;
+}
+
+.stack-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+}
+
+.stack-group-label {
+  margin: 0 0 0.6rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .project-links a {
@@ -468,8 +581,8 @@ h3 {
 
 .capability-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
 }
 
 .capability-card h3 {
