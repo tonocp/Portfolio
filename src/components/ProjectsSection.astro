@@ -1,0 +1,77 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+
+type Project = CollectionEntry<"projects">;
+
+interface Props {
+  eyebrow: string;
+  heading: string;
+  lead: string;
+  coverAltPrefix: string;
+  stackAriaLabelPrefix: string;
+  projects: Project[];
+  secondaryLabel: string;
+  secondaryProjects: Project[];
+}
+
+const { eyebrow, heading, lead, coverAltPrefix, stackAriaLabelPrefix, projects, secondaryLabel, secondaryProjects } =
+  Astro.props;
+---
+
+<section class="section shell">
+  <div class="section-heading projects-heading">
+    <p class="eyebrow">{eyebrow}</p>
+    <h2>{heading}</h2>
+    <p class="section-lead">{lead}</p>
+  </div>
+
+  <div class="projects-grid">
+    {
+      projects.map((project) => (
+        <article class={`project-card theme-${project.data.theme}`}>
+          <div class="project-media">
+            <Image src={project.data.cover} alt={`${coverAltPrefix} ${project.data.title}`} loading="lazy" />
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span>{project.data.year}</span>
+              <span>{project.data.role}</span>
+            </div>
+            <h3>{project.data.title}</h3>
+            <p class="project-tagline">{project.data.tagline}</p>
+            <p class="project-summary">{project.data.summary}</p>
+            <ul class="stack-list" aria-label={`${stackAriaLabelPrefix} ${project.data.title}`}>
+              {project.data.stack.map((item: string) => <li>{item}</li>)}
+            </ul>
+            <div class="project-links">
+              {
+                project.data.links.map((link: { label: string; href: string }) => (
+                  <a href={link.href} target="_blank" rel="noreferrer">
+                    {link.label}
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+
+  <p class="stack-group-label secondary-project-label">{secondaryLabel}</p>
+  <ul class="secondary-project-list">
+    {
+      secondaryProjects.map((project) => (
+        <li class="secondary-project-item">
+          <a href={project.data.links[0].href} class="secondary-project-title" target="_blank" rel="noreferrer">
+            {project.data.title}
+          </a>
+          <span class="secondary-project-meta">
+            {project.data.stack.join(" · ")} · {project.data.year}
+          </span>
+        </li>
+      ))
+    }
+  </ul>
+</section>

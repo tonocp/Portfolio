@@ -1,0 +1,52 @@
+---
+import { fixedColorIcons, iconColorFor, stackGradients, stackIcons } from "../data/stackIcons";
+
+interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+
+const icon = stackIcons[name];
+const gradient = stackGradients[name];
+const color = icon && !gradient ? iconColorFor(icon.hex) : undefined;
+const gradientId = gradient ? `stack-gradient-${name.toLowerCase().replace(/[^a-z0-9]/g, "")}` : undefined;
+const fixedIcon = fixedColorIcons[name];
+---
+
+{
+  fixedIcon ? (
+    <li title={name} class="stack-icon-fixed">
+      <button type="button" class="stack-icon-trigger">
+        <svg viewBox={fixedIcon.viewBox} role="img" aria-hidden="true">
+          {fixedIcon.paths.map((p) => (
+            <path d={p.d} fill={p.fill} />
+          ))}
+        </svg>
+        <span class="visually-hidden">{name}</span>
+      </button>
+    </li>
+  ) : icon ? (
+    <li title={name} style={color ? `--icon-color: ${color}` : undefined}>
+      <button type="button" class="stack-icon-trigger">
+        <svg viewBox={icon.viewBox ?? "0 0 24 24"} role="img" aria-hidden="true">
+          {gradient && gradientId ? (
+            <defs>
+              <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color={gradient[0]} />
+                <stop offset="50%" stop-color={gradient[1]} />
+                <stop offset="100%" stop-color={gradient[2]} />
+              </linearGradient>
+            </defs>
+          ) : null}
+          <path d={icon.path} fill={gradientId ? `url(#${gradientId})` : undefined} />
+        </svg>
+        <span class="visually-hidden">{name}</span>
+      </button>
+    </li>
+  ) : (
+    <li class="stack-cloud-text" title={name}>
+      {name}
+    </li>
+  )
+}

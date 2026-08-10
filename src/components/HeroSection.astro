@@ -1,0 +1,54 @@
+---
+import type { Action, Metric } from "../i18n";
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  primaryCta: Action;
+  secondaryCta: Action;
+  metrics: readonly Metric[];
+  metricsAriaLabel: string;
+  nowKicker: string;
+  nowText: string;
+}
+
+const { eyebrow, title, intro, primaryCta, secondaryCta, metrics, metricsAriaLabel, nowKicker, nowText } = Astro.props;
+---
+
+<section class="hero section shell">
+  <div class="hero-copy">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{title}</h1>
+    <p class="hero-intro">{intro}</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href={primaryCta.href}>{primaryCta.label}</a>
+      <a class="button button-secondary" href={secondaryCta.href}>{secondaryCta.label}</a>
+    </div>
+  </div>
+
+  <div class="hero-panel">
+    <ul class="metric-grid" aria-label={metricsAriaLabel}>
+      {
+        metrics.map((metric) => (
+          <li class="metric-card">
+            <span>{metric.label}</span>
+            <strong>{metric.value}</strong>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="panel-kicker signal-kicker">{nowKicker}</p>
+    <div class="signal-card">
+      <span class="signal-dot" aria-hidden="true"></span>
+      <p>{nowText}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .signal-kicker {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+</style>
