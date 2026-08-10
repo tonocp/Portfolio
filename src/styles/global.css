@@ -187,7 +187,7 @@ h3 {
 h1 {
   max-width: 20ch;
   margin-bottom: 1.5rem;
-  font-size: clamp(3.5rem, 8vw, 5rem);
+  font-size: clamp(2.75rem, 8vw, 5rem);
   line-height: 1;
 }
 
@@ -752,6 +752,18 @@ h3 {
 
   .hero {
     padding: 2rem 0 1.5rem;
+  }
+
+  .metric-card {
+    padding-left: 0;
+    padding-top: 1rem;
+    border-left: none;
+    border-top: 1px solid var(--line);
+  }
+
+  .metric-card:first-child {
+    padding-top: 0;
+    border-top: none;
   }
 
   .section {
