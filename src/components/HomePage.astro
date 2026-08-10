@@ -1,0 +1,95 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+
+import AboutSection from "./AboutSection.astro";
+import CapabilitiesSection from "./CapabilitiesSection.astro";
+import ContactSection from "./ContactSection.astro";
+import HeroSection from "./HeroSection.astro";
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+import ProjectsSection from "./ProjectsSection.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { siteContent, type Locale } from "../i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = siteContent[locale];
+
+type ProjectEntry = CollectionEntry<"projects">;
+
+const localeProjects = (await getCollection("projects"))
+  .filter((project: ProjectEntry) => project.id.startsWith(`${locale}/`))
+  .sort((a: ProjectEntry, b: ProjectEntry) => a.data.order - b.data.order);
+
+const { projects, secondaryProjects } = localeProjects.reduce(
+  (acc: { projects: ProjectEntry[]; secondaryProjects: ProjectEntry[] }, project: ProjectEntry) => {
+    acc[project.data.featured ? "projects" : "secondaryProjects"].push(project);
+    return acc;
+  },
+  { projects: [], secondaryProjects: [] }
+);
+---
+
+<BaseLayout title={t.seo.title} description={t.seo.description} locale={locale}>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="#home">{t.nav.brand}</a>
+      <nav aria-label={t.nav.ariaLabel}>
+        {t.nav.links.map((link) => <a href={link.href}>{link.label}</a>)}
+        <LanguageSwitcher locale={locale} />
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div id="home" class="anchor-target" aria-hidden="true"></div>
+    <HeroSection
+      eyebrow={t.hero.eyebrow}
+      title={t.hero.title}
+      intro={t.hero.intro}
+      primaryCta={t.hero.primaryCta}
+      secondaryCta={t.hero.secondaryCta}
+      metrics={t.hero.metrics}
+      metricsAriaLabel={t.hero.metricsAriaLabel}
+      nowKicker={t.hero.nowKicker}
+      nowText={t.hero.nowText}
+    />
+    <div id="sobre-mi" class="anchor-target" aria-hidden="true"></div>
+    <AboutSection eyebrow={t.about.eyebrow} title={t.about.title} body={t.about.body} />
+    <div id="stack" class="anchor-target" aria-hidden="true"></div>
+    <CapabilitiesSection
+      eyebrow={t.capabilities.eyebrow}
+      title={t.capabilities.title}
+      lead={t.capabilities.lead}
+      items={t.capabilities.items}
+      stackPrincipalLabel={t.capabilities.stackPrincipalLabel}
+      stackPrincipal={t.capabilities.stackPrincipal}
+      stackSecondaryLabel={t.capabilities.stackSecondaryLabel}
+      stackGroups={t.capabilities.stackGroups}
+      stackAriaLabelPrefix={t.capabilities.stackAriaLabelPrefix}
+      trademarkNote={t.capabilities.trademarkNote}
+    />
+    <div id="proyectos" class="anchor-target" aria-hidden="true"></div>
+    <ProjectsSection
+      eyebrow={t.projects.eyebrow}
+      heading={t.projects.heading}
+      lead={t.projects.lead}
+      coverAltPrefix={t.projects.coverAltPrefix}
+      stackAriaLabelPrefix={t.projects.stackAriaLabelPrefix}
+      projects={projects}
+      secondaryLabel={t.projects.secondaryLabel}
+      secondaryProjects={secondaryProjects}
+    />
+    <div id="contacto" class="anchor-target" aria-hidden="true"></div>
+    <ContactSection
+      eyebrow={t.contact.eyebrow}
+      title={t.contact.title}
+      body={t.contact.body}
+      links={t.contact.links}
+      footerBrand={t.nav.brand}
+      footerBuiltWith={t.footer.builtWith}
+    />
+  </main>
+</BaseLayout>

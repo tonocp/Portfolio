@@ -1,0 +1,76 @@
+---
+import StackIcon from "./StackIcon.astro";
+import type { Capability, StackGroup } from "../i18n";
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  lead: string;
+  items: readonly Capability[];
+  stackPrincipalLabel: string;
+  stackPrincipal: readonly string[];
+  stackSecondaryLabel: string;
+  stackGroups: readonly StackGroup[];
+  stackAriaLabelPrefix: string;
+  trademarkNote: string;
+}
+
+const {
+  eyebrow,
+  title,
+  lead,
+  items,
+  stackPrincipalLabel,
+  stackPrincipal,
+  stackSecondaryLabel,
+  stackGroups,
+  stackAriaLabelPrefix,
+  trademarkNote
+} = Astro.props;
+---
+
+<section class="section shell capabilities">
+  <div class="section-heading">
+    <p class="eyebrow">{eyebrow}</p>
+    <h2>{title}</h2>
+    <p class="section-lead">{lead}</p>
+  </div>
+
+  <div class="capability-grid">
+    {
+      items.map((item) => (
+        <article class="capability-card">
+          <h3>{item.title}</h3>
+          <p>{item.description}</p>
+        </article>
+      ))
+    }
+  </div>
+
+  <div class="stack-block">
+    <p class="panel-kicker stack-principal-label">{stackPrincipalLabel}</p>
+    <ul class="stack-cloud stack-cloud-principal" aria-label={stackPrincipalLabel}>
+      {stackPrincipal.map((item) => <StackIcon name={item} />)}
+    </ul>
+  </div>
+
+  <div class="stack-block">
+    <p class="stack-group-label stack-secondary-label">{stackSecondaryLabel}</p>
+    <div class="stack-groups">
+      {
+        stackGroups.map((group) => (
+          <div class="stack-group">
+            <p class="stack-group-label">{group.label}</p>
+            <ul class="stack-cloud" aria-label={`${stackAriaLabelPrefix} ${group.label}`}>
+              {group.items.map((item) => (
+                <StackIcon name={item} />
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <p class="trademark-note">{trademarkNote}</p>
+</section>
