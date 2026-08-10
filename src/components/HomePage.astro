@@ -17,12 +17,14 @@ interface Props {
 const { locale } = Astro.props;
 const t = siteContent[locale];
 
-const projects = (await getCollection("projects"))
+const localeProjects = (await getCollection("projects"))
   .filter((project: CollectionEntry<"projects">) =>
     locale === "en" ? project.id.startsWith("en/") : !project.id.startsWith("en/")
   )
-  .filter((project: CollectionEntry<"projects">) => project.data.featured)
   .sort((a: CollectionEntry<"projects">, b: CollectionEntry<"projects">) => a.data.order - b.data.order);
+
+const projects = localeProjects.filter((project: CollectionEntry<"projects">) => project.data.featured);
+const archiveProjects = localeProjects.filter((project: CollectionEntry<"projects">) => !project.data.featured);
 ---
 
 <BaseLayout title={t.seo.title} description={t.seo.description} locale={locale}>
@@ -62,6 +64,7 @@ const projects = (await getCollection("projects"))
       stackSecondaryLabel={t.capabilities.stackSecondaryLabel}
       stackGroups={t.capabilities.stackGroups}
       stackAriaLabelPrefix={t.capabilities.stackAriaLabelPrefix}
+      trademarkNote={t.capabilities.trademarkNote}
     />
     <div id="proyectos" class="anchor-target" aria-hidden="true"></div>
     <ProjectsSection
@@ -71,6 +74,8 @@ const projects = (await getCollection("projects"))
       coverAltPrefix={t.projects.coverAltPrefix}
       stackAriaLabelPrefix={t.projects.stackAriaLabelPrefix}
       projects={projects}
+      archiveLabel={t.projects.archiveLabel}
+      archiveProjects={archiveProjects}
     />
     <div id="contacto" class="anchor-target" aria-hidden="true"></div>
     <ContactSection eyebrow={t.contact.eyebrow} title={t.contact.title} body={t.contact.body} links={t.contact.links} />

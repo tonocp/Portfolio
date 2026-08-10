@@ -462,8 +462,8 @@ h3 {
 }
 
 .stack-cloud-principal svg {
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .stack-cloud li:hover,
@@ -501,9 +501,14 @@ h3 {
 }
 
 .stack-cloud svg {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
   fill: currentColor;
+}
+
+.stack-icon-fixed svg {
+  width: 2rem;
+  height: 2rem;
 }
 
 .stack-cloud-text {
@@ -521,7 +526,8 @@ h3 {
   gap: 0.75rem;
 }
 
-.capability-grid + .stack-block {
+.capability-grid + .stack-block,
+.stack-block + .stack-block {
   margin-top: 2.5rem;
 }
 
@@ -530,9 +536,11 @@ h3 {
 }
 
 .stack-groups {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-between;
+  row-gap: 2rem;
+  column-gap: 1.5rem;
 }
 
 .stack-group {
@@ -549,6 +557,13 @@ h3 {
   text-transform: uppercase;
 }
 
+.trademark-note {
+  margin-top: 1.5rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  opacity: 0.7;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -563,6 +578,48 @@ h3 {
 
 .project-links a {
   font-weight: 700;
+}
+
+.archive-label {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.archive-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.archive-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.archive-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.archive-title {
+  color: var(--text);
+  font-weight: 700;
+  transition: color 180ms ease;
+}
+
+.archive-title:hover,
+.archive-title:focus-visible {
+  color: var(--accent-2);
+}
+
+.archive-meta {
+  color: var(--muted);
+  font-size: 0.88rem;
 }
 
 .theme-amber .project-content {
@@ -612,6 +669,11 @@ h3 {
 
   .capability-grid {
     grid-template-columns: 1fr;
+  }
+
+  .stack-groups {
+    grid-template-columns: 1fr;
+    justify-content: normal;
   }
 
   .project-media img {

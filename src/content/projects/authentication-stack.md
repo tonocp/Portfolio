@@ -12,8 +12,8 @@ role: "Full stack"
 links:
   - label: "Ver proyecto"
     href: "https://auth-app-tcp.herokuapp.com/"
-featured: true
-order: 1
+featured: false
+order: 16
 cover: "/img/authApp.webp"
 theme: "amber"
 ---

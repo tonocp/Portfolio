@@ -12,7 +12,7 @@ links:
   - label: "Ver proyecto"
     href: "https://gifs-app-tcp.netlify.app/"
 featured: false
-order: 12
+order: 11
 cover: "/img/gifsApp.webp"
 theme: "ice"
 ---

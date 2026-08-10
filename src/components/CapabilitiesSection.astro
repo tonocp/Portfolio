@@ -21,6 +21,7 @@ interface Props {
   stackSecondaryLabel: string;
   stackGroups: readonly StackGroup[];
   stackAriaLabelPrefix: string;
+  trademarkNote: string;
 }
 
 const {
@@ -32,7 +33,8 @@ const {
   stackPrincipal,
   stackSecondaryLabel,
   stackGroups,
-  stackAriaLabelPrefix
+  stackAriaLabelPrefix,
+  trademarkNote
 } = Astro.props;
 ---
 
@@ -78,4 +80,6 @@ const {
       }
     </div>
   </div>
+
+  <p class="trademark-note">{trademarkNote}</p>
 </section>

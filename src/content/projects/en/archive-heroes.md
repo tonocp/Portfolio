@@ -12,8 +12,8 @@ role: "Full stack"
 links:
   - label: "View project"
     href: "https://crud-heroes.herokuapp.com/"
-featured: false
-order: 10
+featured: true
+order: 1
 cover: "/img/heroesApp.webp"
 theme: "amber"
 ---

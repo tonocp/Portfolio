@@ -11,7 +11,7 @@ links:
   - label: "View project"
     href: "https://pipes-app-tcp.netlify.app/"
 featured: false
-order: 14
+order: 13
 cover: "/img/pipesApp.webp"
 theme: "amber"
 ---

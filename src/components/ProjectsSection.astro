@@ -23,9 +23,12 @@ interface Props {
   coverAltPrefix: string;
   stackAriaLabelPrefix: string;
   projects: Project[];
+  archiveLabel: string;
+  archiveProjects: Project[];
 }
 
-const { eyebrow, heading, lead, coverAltPrefix, stackAriaLabelPrefix, projects } = Astro.props;
+const { eyebrow, heading, lead, coverAltPrefix, stackAriaLabelPrefix, projects, archiveLabel, archiveProjects } =
+  Astro.props;
 ---
 
 <section class="section shell">
@@ -61,4 +64,20 @@ const { eyebrow, heading, lead, coverAltPrefix, stackAriaLabelPrefix, projects }
       ))
     }
   </div>
+
+  <p class="stack-group-label archive-label">{archiveLabel}</p>
+  <ul class="archive-list">
+    {
+      archiveProjects.map((project) => (
+        <li class="archive-item">
+          <a href={project.data.links[0].href} class="archive-title">
+            {project.data.title}
+          </a>
+          <span class="archive-meta">
+            {project.data.stack.join(" · ")} · {project.data.year}
+          </span>
+        </li>
+      ))
+    }
+  </ul>
 </section>

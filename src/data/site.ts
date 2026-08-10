@@ -62,6 +62,7 @@ interface SiteContent {
     stackSecondaryLabel: string;
     stackGroups: readonly { label: string; items: readonly string[] }[];
     stackAriaLabelPrefix: string;
+    trademarkNote: string;
   };
   projects: {
     eyebrow: string;
@@ -69,6 +70,7 @@ interface SiteContent {
     lead: string;
     coverAltPrefix: string;
     stackAriaLabelPrefix: string;
+    archiveLabel: string;
   };
   contact: {
     eyebrow: string;
@@ -155,18 +157,21 @@ const es: SiteContent = {
     stackGroups: [
       { label: "Frontend", items: ["TypeScript", "Angular", "Astro"] },
       { label: "Backend", items: ["Node.js", "NestJS", "Python", "FastAPI"] },
-      { label: "Datos", items: ["MySQL", "MongoDB"] },
+      { label: "Datos", items: ["MySQL", "MSSQL", "MongoDB"] },
       { label: "DevOps & CI/CD", items: ["Kubernetes", "GitHub Actions"] },
+      { label: "Cloud", items: ["Google Cloud", "Azure", "AWS", "Cloudflare"] },
       { label: "IoT", items: ["RabbitMQ", "FIWARE", "Raspberry Pi"] }
     ],
-    stackAriaLabelPrefix: "Tecnologías de"
+    stackAriaLabelPrefix: "Tecnologías de",
+    trademarkNote: "Las marcas y logotipos pertenecen a sus respectivos titulares."
   },
   projects: {
     eyebrow: "Proyectos",
-    heading: "Proyectos seleccionados.",
+    heading: "Proyectos con los que he aprendido.",
     lead: "Trabajos que muestran cómo pienso y cómo construyo.",
     coverAltPrefix: "Captura de",
-    stackAriaLabelPrefix: "Tecnologías usadas en"
+    stackAriaLabelPrefix: "Tecnologías usadas en",
+    archiveLabel: "También he construido"
   },
   contact: {
     eyebrow: "Contacto",
@@ -258,18 +263,21 @@ const en: SiteContent = {
     stackGroups: [
       { label: "Frontend", items: ["TypeScript", "Angular", "Astro"] },
       { label: "Backend", items: ["Node.js", "NestJS", "Python", "FastAPI"] },
-      { label: "Data", items: ["MySQL", "MongoDB"] },
+      { label: "Data", items: ["MySQL", "MSSQL", "MongoDB"] },
       { label: "DevOps & CI/CD", items: ["Kubernetes", "GitHub Actions"] },
+      { label: "Cloud", items: ["Google Cloud", "Azure", "AWS", "Cloudflare"] },
       { label: "IoT", items: ["RabbitMQ", "FIWARE", "Raspberry Pi"] }
     ],
-    stackAriaLabelPrefix: "Technologies used in"
+    stackAriaLabelPrefix: "Technologies used in",
+    trademarkNote: "Trademarks and logos belong to their respective owners."
   },
   projects: {
     eyebrow: "Projects",
-    heading: "Selected projects.",
+    heading: "Projects I've learned from.",
     lead: "Work that shows how I think and how I build.",
     coverAltPrefix: "Screenshot of",
-    stackAriaLabelPrefix: "Technologies used in"
+    stackAriaLabelPrefix: "Technologies used in",
+    archiveLabel: "Also built"
   },
   contact: {
     eyebrow: "Contact",
