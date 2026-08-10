@@ -61,8 +61,23 @@ img {
   max-width: 100%;
 }
 
-main {
-  padding-bottom: 3rem;
+.card-footer {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.card-footer p {
+  margin: 0;
+}
+
+.footer-icon {
+  width: 0.95rem;
+  height: 0.95rem;
+  vertical-align: -0.15rem;
+  margin: 0 0.05rem;
 }
 
 .shell {
@@ -72,6 +87,10 @@ main {
 
 .section {
   padding: 7rem 0;
+}
+
+.contact-section {
+  padding-bottom: 0;
 }
 
 .anchor-target {
@@ -252,10 +271,24 @@ h3 {
 }
 
 .hero-actions,
-.contact-links,
 .project-links {
   display: flex;
   flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.75rem;
+}
+
+.contact-link-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 0.9rem;
 }
 
@@ -263,6 +296,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   min-height: 3rem;
   padding: 0.8rem 1.2rem;
   border: 1px solid var(--line);
@@ -271,6 +305,23 @@ h3 {
     transform 180ms ease,
     border-color 180ms ease,
     background-color 180ms ease;
+}
+
+.button-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+}
+
+.button-icon-only {
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+}
+
+.button-icon-only .button-icon {
+  width: 1.3rem;
+  height: 1.3rem;
 }
 
 .button:hover,
@@ -655,7 +706,9 @@ h3 {
 
 .contact-card {
   padding: clamp(1.5rem, 4vw, 3rem);
-  border-radius: var(--radius-lg);
+  padding-bottom: 1.5rem;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  border-bottom: none;
   background:
     radial-gradient(circle at top right, rgba(244, 184, 96, 0.12), transparent 28%),
     rgba(8, 20, 37, 0.84);
@@ -706,5 +759,13 @@ h3 {
   .hero-panel,
   .contact-card {
     padding: 1.25rem;
+  }
+
+  .contact-card {
+    padding-bottom: 1.25rem;
+  }
+
+  .card-footer {
+    padding-top: 1.25rem;
   }
 }

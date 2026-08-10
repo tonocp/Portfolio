@@ -78,6 +78,13 @@ const archiveProjects = localeProjects.filter((project: CollectionEntry<"project
       archiveProjects={archiveProjects}
     />
     <div id="contacto" class="anchor-target" aria-hidden="true"></div>
-    <ContactSection eyebrow={t.contact.eyebrow} title={t.contact.title} body={t.contact.body} links={t.contact.links} />
+    <ContactSection
+      eyebrow={t.contact.eyebrow}
+      title={t.contact.title}
+      body={t.contact.body}
+      links={t.contact.links}
+      footerBrand={t.nav.brand}
+      footerBuiltWith={t.footer.builtWith}
+    />
   </main>
 </BaseLayout>

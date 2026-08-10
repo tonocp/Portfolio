@@ -24,6 +24,8 @@ interface Capability {
 interface ContactLink {
   label: string;
   href: string;
+  icon?: "github" | "linkedin" | "email" | "phone";
+  primary?: boolean;
 }
 
 interface SiteContent {
@@ -78,6 +80,9 @@ interface SiteContent {
     body: string;
     links: readonly ContactLink[];
   };
+  footer: {
+    builtWith: string;
+  };
 }
 
 const es: SiteContent = {
@@ -116,7 +121,7 @@ const es: SiteContent = {
       { value: "Español · Nativo\nInglés · B2", label: "Idiomas" }
     ],
     nowKicker: "Ahora mismo",
-    nowText: "Siempre aprendiendo algo nuevo y abierto a nuevos retos profesionales."
+    nowText: "Siempre aprendiendo algo nuevo, tanto en lo profesional como en lo personal."
   },
   about: {
     eyebrow: "Sobre mí",
@@ -176,13 +181,16 @@ const es: SiteContent = {
   contact: {
     eyebrow: "Contacto",
     title: "Hablemos",
-    body: "Si este perfil encaja con lo que necesitas, hablemos.",
+    body: "Si tienes un proyecto entre manos, o simplemente te apetece conectar, aquí me tienes.",
     links: [
-      { label: "GitHub", href: "https://github.com/tonocp" },
-      { label: "LinkedIn", href: "https://www.linkedin.com/in/tcarrascosa" },
-      { label: "Email", href: "mailto:amcp88@gmail.com" },
-      { label: "Teléfono", href: "tel:+34620100398" }
+      { label: "Email", href: "mailto:amcp88@gmail.com", icon: "email", primary: true },
+      { label: "Teléfono", href: "tel:+34620100398", icon: "phone" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/tcarrascosa", icon: "linkedin" },
+      { label: "GitHub", href: "https://github.com/tonocp", icon: "github" }
     ]
+  },
+  footer: {
+    builtWith: "Desarrollado con"
   }
 };
 
@@ -222,7 +230,7 @@ const en: SiteContent = {
       { value: "Spanish · Native\nEnglish · B2", label: "Languages" }
     ],
     nowKicker: "Right now",
-    nowText: "Always learning something new and open to new professional challenges."
+    nowText: "Always learning something new, both professionally and personally."
   },
   about: {
     eyebrow: "About",
@@ -282,13 +290,16 @@ const en: SiteContent = {
   contact: {
     eyebrow: "Contact",
     title: "Let's talk",
-    body: "If this profile fits what you need, let's talk.",
+    body: "If you have a project in mind, or just want to connect, here I am.",
     links: [
-      { label: "GitHub", href: "https://github.com/tonocp" },
-      { label: "LinkedIn", href: "https://www.linkedin.com/in/tcarrascosa" },
-      { label: "Email", href: "mailto:amcp88@gmail.com" },
-      { label: "Phone", href: "tel:+34620100398" }
+      { label: "Email", href: "mailto:amcp88@gmail.com", icon: "email", primary: true },
+      { label: "Phone", href: "tel:+34620100398", icon: "phone" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/tcarrascosa", icon: "linkedin" },
+      { label: "GitHub", href: "https://github.com/tonocp", icon: "github" }
     ]
+  },
+  footer: {
+    builtWith: "Built with"
   }
 };
 
