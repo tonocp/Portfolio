@@ -15,6 +15,7 @@ featured: false
 order: 17
 cover: "../../../assets/projects/barArmando.webp"
 theme: "mint"
+locale: "es"
 ---
 
 Una presencia digital directa, sin dependencias, pensada para durar.

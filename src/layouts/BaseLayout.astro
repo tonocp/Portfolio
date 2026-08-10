@@ -2,7 +2,7 @@
 import { getAbsoluteLocaleUrl } from "astro:i18n";
 
 import "../styles/global.css";
-import type { Locale } from "../i18n";
+import { defaultLocale, locales, type Locale } from "../i18n";
 
 interface Props {
   title: string;
@@ -11,8 +11,7 @@ interface Props {
 }
 
 const { title, description, locale } = Astro.props;
-const esUrl = getAbsoluteLocaleUrl("es", "/");
-const enUrl = getAbsoluteLocaleUrl("en", "/");
+const defaultLocaleUrl = getAbsoluteLocaleUrl(defaultLocale, "/");
 ---
 
 <!doctype html>
@@ -22,9 +21,8 @@ const enUrl = getAbsoluteLocaleUrl("en", "/");
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="alternate" hreflang="es" href={esUrl} />
-    <link rel="alternate" hreflang="en" href={enUrl} />
-    <link rel="alternate" hreflang="x-default" href={esUrl} />
+    {locales.map((entry) => <link rel="alternate" hreflang={entry} href={getAbsoluteLocaleUrl(entry, "/")} />)}
+    <link rel="alternate" hreflang="x-default" href={defaultLocaleUrl} />
     <title>{title}</title>
   </head>
   <body>

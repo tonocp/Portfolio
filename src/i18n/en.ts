@@ -75,7 +75,14 @@ export const en: SiteContent = {
     stackPrincipalLabel: "Currently working with",
     stackPrincipal,
     stackSecondaryLabel: "Also worked with",
-    stackGroups: buildStackGroups(["Frontend", "Backend", "Data", "DevOps & CI/CD", "Cloud", "IoT"]),
+    stackGroups: buildStackGroups({
+      frontend: "Frontend",
+      backend: "Backend",
+      data: "Data",
+      devops: "DevOps & CI/CD",
+      cloud: "Cloud",
+      iot: "IoT"
+    }),
     stackAriaLabelPrefix: "Technologies used in",
     trademarkNote: "Trademarks and logos belong to their respective owners."
   },

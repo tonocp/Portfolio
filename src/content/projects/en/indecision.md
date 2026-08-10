@@ -14,6 +14,7 @@ featured: false
 order: 10
 cover: "../../../assets/projects/indecisionApp.webp"
 theme: "coral"
+locale: "en"
 ---
 
 A random decision, resolved with a clean, reactive interface.

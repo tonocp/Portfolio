@@ -16,6 +16,7 @@ featured: false
 order: 16
 cover: "../../../assets/projects/authApp.webp"
 theme: "amber"
+locale: "en"
 ---
 
 A clear, validated authentication base with a carefully designed UX.

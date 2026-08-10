@@ -12,15 +12,18 @@ export const stackPrincipal = [
   "Codex"
 ];
 
-const stackGroupItems = [
-  ["TypeScript", "Angular", "Astro"],
-  ["Node.js", "NestJS", "Python", "FastAPI"],
-  ["MySQL", "MSSQL", "MongoDB"],
-  ["Kubernetes", "GitHub Actions"],
-  ["Google Cloud", "Azure", "AWS", "Cloudflare"],
-  ["RabbitMQ", "FIWARE", "Raspberry Pi"]
-];
+const stackGroupKeys = ["frontend", "backend", "data", "devops", "cloud", "iot"] as const;
+type StackGroupKey = (typeof stackGroupKeys)[number];
 
-export function buildStackGroups(labels: readonly string[]): StackGroup[] {
-  return labels.map((label, i) => ({ label, items: stackGroupItems[i] }));
+const stackGroupItems: Record<StackGroupKey, readonly string[]> = {
+  frontend: ["TypeScript", "Angular", "Astro"],
+  backend: ["Node.js", "NestJS", "Python", "FastAPI"],
+  data: ["MySQL", "MSSQL", "MongoDB"],
+  devops: ["Kubernetes", "GitHub Actions"],
+  cloud: ["Google Cloud", "Azure", "AWS", "Cloudflare"],
+  iot: ["RabbitMQ", "FIWARE", "Raspberry Pi"]
+};
+
+export function buildStackGroups(labels: Record<StackGroupKey, string>): StackGroup[] {
+  return stackGroupKeys.map((key) => ({ label: labels[key], items: stackGroupItems[key] }));
 }

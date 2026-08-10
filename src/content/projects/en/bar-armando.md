@@ -15,6 +15,7 @@ featured: false
 order: 17
 cover: "../../../assets/projects/barArmando.webp"
 theme: "mint"
+locale: "en"
 ---
 
 A direct digital presence, no dependencies, built to last.

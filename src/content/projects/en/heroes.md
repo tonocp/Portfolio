@@ -16,6 +16,7 @@ featured: true
 order: 1
 cover: "../../../assets/projects/heroesApp.webp"
 theme: "amber"
+locale: "en"
 ---
 
 A complete CRUD, end to end, with no shortcuts or filler.

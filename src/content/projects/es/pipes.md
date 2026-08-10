@@ -14,6 +14,7 @@ featured: false
 order: 13
 cover: "../../../assets/projects/pipesApp.webp"
 theme: "amber"
+locale: "es"
 ---
 
 Pipes personalizados para que los datos se lean con sentido.

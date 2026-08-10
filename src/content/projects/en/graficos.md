@@ -14,6 +14,7 @@ featured: false
 order: 15
 cover: "../../../assets/projects/graficosApp.webp"
 theme: "coral"
+locale: "en"
 ---
 
 Charts built to be read at a glance, not to decorate.

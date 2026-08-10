@@ -16,6 +16,7 @@ featured: true
 order: 1
 cover: "../../../assets/projects/heroesApp.webp"
 theme: "amber"
+locale: "es"
 ---
 
 Un CRUD completo, de extremo a extremo, sin atajos ni relleno.

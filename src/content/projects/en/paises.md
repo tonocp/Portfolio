@@ -14,6 +14,7 @@ featured: false
 order: 12
 cover: "../../../assets/projects/paisesApp.webp"
 theme: "mint"
+locale: "en"
 ---
 
 Country data from around the world, ready to explore and compare.

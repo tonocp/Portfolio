@@ -14,6 +14,7 @@ featured: false
 order: 18
 cover: "../../../assets/projects/talleresCarrascosa.webp"
 theme: "amber"
+locale: "en"
 ---
 
 A real website for a real business, with no unnecessary flourish.

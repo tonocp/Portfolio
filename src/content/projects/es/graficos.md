@@ -14,6 +14,7 @@ featured: false
 order: 15
 cover: "../../../assets/projects/graficosApp.webp"
 theme: "coral"
+locale: "es"
 ---
 
 Gráficos pensados para leerse de un vistazo, no para decorar.

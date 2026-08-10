@@ -18,7 +18,7 @@ const { locale } = Astro.props;
 const t = siteContent[locale];
 
 const localeProjects = (await getCollection("projects"))
-  .filter((project: CollectionEntry<"projects">) => project.id.startsWith(`${locale}/`))
+  .filter((project: CollectionEntry<"projects">) => project.data.locale === locale)
   .sort((a: CollectionEntry<"projects">, b: CollectionEntry<"projects">) => a.data.order - b.data.order);
 
 type ProjectEntry = CollectionEntry<"projects">;

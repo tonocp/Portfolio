@@ -16,6 +16,7 @@ featured: true
 order: 2
 cover: "../../../assets/projects/mapsApp.webp"
 theme: "ice"
+locale: "es"
 ---
 
 Integración con una API visual y una interfaz con feedback inmediato.
