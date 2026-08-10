@@ -1,6 +1,6 @@
 ---
 import { siAstro, siGithub } from "simple-icons";
-import type { ContactLink } from "../data/site";
+import type { ContactLink } from "../i18n";
 
 interface Props {
   eyebrow: string;
@@ -16,7 +16,6 @@ const year = new Date().getFullYear();
 const contactLinks = links.slice(0, 2);
 const socialLinks = links.slice(2);
 
-// Generic UI glyphs (not brand marks), sharing one stroke-icon wrapper.
 const strokeIconAttrs = {
   fill: "none",
   stroke: "currentColor",
@@ -25,10 +24,6 @@ const strokeIconAttrs = {
   "stroke-linejoin": "round"
 } as const;
 
-// LinkedIn's mark isn't in simple-icons (removed in v14, LinkedIn actively enforces
-// against redistribution). Linking to one's own profile is nominative use, not
-// redistribution, so it's used here directly — path sourced from Font Awesome Free
-// (fab fa-linkedin, CC BY 4.0), the same asset most personal portfolios use for this.
 const socialIcons: Record<string, { viewBox: string; path: string }> = {
   github: { viewBox: "0 0 24 24", path: siGithub.path },
   linkedin: {

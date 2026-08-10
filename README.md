@@ -38,9 +38,9 @@ La aplicación quedará disponible en `http://localhost:4321`.
 - `src/pages/index.astro` y `src/pages/en/index.astro`: entradas de cada idioma, ambas montan `HomePage.astro`
 - `src/components/HomePage.astro`: composición de la página (hero, sobre mí, stack, proyectos, contacto) y lectura de la colección de proyectos
 - `src/components/`: resto de secciones y piezas reutilizables (`HeroSection`, `AboutSection`, `CapabilitiesSection`, `StackIcon`, `ProjectsSection`, `ContactSection`, `LanguageSwitcher`)
-- `src/content/projects/`: proyectos gestionados como colección tipada (versión en inglés bajo `en/`)
+- `src/content/projects/`: proyectos gestionados como colección tipada, con una subcarpeta por idioma (`es/`, `en/`)
 - `src/content.config.ts`: esquema y loader de las content collections
-- `src/data/site.ts`: textos y contenido editorial principal, por idioma
+- `src/i18n/`: contenido editorial y tipos, separado por idioma (`types.ts`, `shared.ts`, `es.ts`, `en.ts`, `index.ts`)
 - `src/data/stackIcons.ts`: registro de iconos de tecnologías usado por `StackIcon.astro`
 - `src/assets/projects/`: capturas de los proyectos, optimizadas por Astro en build
 - `src/styles/global.css`: sistema visual global
@@ -48,6 +48,6 @@ La aplicación quedará disponible en `http://localhost:4321`.
 
 ## Cómo actualizar contenido
 
-Los proyectos se definen en la colección `projects` usando frontmatter tipado, con una versión por idioma (`src/content/projects/*.md` para español, `src/content/projects/en/*.md` para inglés). Para destacar uno en la home, basta con marcar `featured: true` y ajustar `order`. La portada (`cover`) apunta a un archivo en `src/assets/projects/`.
+Los proyectos se definen en la colección `projects` usando frontmatter tipado, con una versión por idioma (`src/content/projects/es/*.md` y `src/content/projects/en/*.md`). Para destacar uno en la home, basta con marcar `featured: true` y ajustar `order`. La portada (`cover`) apunta a un archivo en `src/assets/projects/`.
 
-Los textos generales de la web viven en `src/data/site.ts`, con un bloque `es` y otro `en`, así que es fácil cambiar copies, CTAs o bloques de presentación sin tocar el layout.
+Los textos generales de la web viven en `src/i18n/es.ts` y `src/i18n/en.ts`, cada uno tipado contra `src/i18n/types.ts`, así que es fácil cambiar copies, CTAs o bloques de presentación sin tocar el layout ni el otro idioma.

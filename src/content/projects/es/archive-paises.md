@@ -12,7 +12,7 @@ links:
     href: "https://paises-app-tcp.netlify.app/"
 featured: false
 order: 12
-cover: "../../assets/projects/paisesApp.webp"
+cover: "../../../assets/projects/paisesApp.webp"
 theme: "mint"
 ---
 
