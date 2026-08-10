@@ -13,7 +13,7 @@ export const stackPrincipal = [
 ];
 
 const stackGroupKeys = ["frontend", "backend", "data", "devops", "cloud", "iot"] as const;
-type StackGroupKey = (typeof stackGroupKeys)[number];
+export type StackGroupKey = (typeof stackGroupKeys)[number];
 
 const stackGroupItems: Record<StackGroupKey, readonly string[]> = {
   frontend: ["TypeScript", "Angular", "Astro"],

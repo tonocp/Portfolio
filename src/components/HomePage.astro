@@ -17,11 +17,11 @@ interface Props {
 const { locale } = Astro.props;
 const t = siteContent[locale];
 
-const localeProjects = (await getCollection("projects"))
-  .filter((project: CollectionEntry<"projects">) => project.data.locale === locale)
-  .sort((a: CollectionEntry<"projects">, b: CollectionEntry<"projects">) => a.data.order - b.data.order);
-
 type ProjectEntry = CollectionEntry<"projects">;
+
+const localeProjects = (await getCollection("projects"))
+  .filter((project: ProjectEntry) => project.id.startsWith(`${locale}/`))
+  .sort((a: ProjectEntry, b: ProjectEntry) => a.data.order - b.data.order);
 
 const { projects, secondaryProjects } = localeProjects.reduce(
   (acc: { projects: ProjectEntry[]; secondaryProjects: ProjectEntry[] }, project: ProjectEntry) => {

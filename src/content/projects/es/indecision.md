@@ -14,7 +14,6 @@ featured: false
 order: 10
 cover: "../../../assets/projects/indecisionApp.webp"
 theme: "coral"
-locale: "es"
 ---
 
 Una decisión al azar, resuelta con una interfaz reactiva y limpia.

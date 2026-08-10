@@ -2,8 +2,6 @@ import { glob } from "astro/loaders";
 import { defineCollection } from "astro:content";
 import { z } from "astro/zod";
 
-import { locales } from "./i18n";
-
 const linkSchema = z.object({
   label: z.string(),
   href: z.url()
@@ -23,8 +21,7 @@ const projects = defineCollection({
       featured: z.boolean(),
       order: z.number().int(),
       cover: image(),
-      theme: z.enum(["amber", "ice", "coral", "mint"]),
-      locale: z.enum(locales)
+      theme: z.enum(["amber", "ice", "coral", "mint"])
     })
 });
 

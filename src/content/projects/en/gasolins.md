@@ -15,7 +15,6 @@ featured: true
 order: 4
 cover: "../../../assets/projects/gasolins.webp"
 theme: "mint"
-locale: "en"
 ---
 
 Less artifice, more clarity: just what's needed to check the data.

@@ -15,7 +15,6 @@ featured: false
 order: 11
 cover: "../../../assets/projects/gifsApp.webp"
 theme: "ice"
-locale: "en"
 ---
 
 A fast, no-fuss search built on a real external API.

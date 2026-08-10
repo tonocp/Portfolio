@@ -14,7 +14,6 @@ featured: false
 order: 14
 cover: "../../../assets/projects/nestedApp.webp"
 theme: "ice"
-locale: "en"
 ---
 
 Selectors that depend on each other, without losing state along the way.

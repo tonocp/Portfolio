@@ -15,7 +15,6 @@ featured: true
 order: 3
 cover: "../../../assets/projects/pokemonApp.webp"
 theme: "coral"
-locale: "es"
 ---
 
 Una idea pequeña convertida en una experiencia cuidada y rápida.

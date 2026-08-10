@@ -32,6 +32,7 @@ export interface ContactLink {
   href: string;
   icon?: "github" | "linkedin" | "email" | "phone";
   primary?: boolean;
+  group: "cta" | "social";
 }
 
 export interface SiteContent {

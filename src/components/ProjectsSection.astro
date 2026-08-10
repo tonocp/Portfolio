@@ -1,23 +1,8 @@
 ---
 import { Image } from "astro:assets";
-import type { ImageMetadata } from "astro";
+import type { CollectionEntry } from "astro:content";
 
-interface Project {
-  id: string;
-  data: {
-    title: string;
-    tagline: string;
-    year: number;
-    stack: string[];
-    summary: string;
-    role: string;
-    links: { label: string; href: string }[];
-    featured: boolean;
-    order: number;
-    cover: ImageMetadata;
-    theme: "amber" | "ice" | "coral" | "mint";
-  };
-}
+type Project = CollectionEntry<"projects">;
 
 interface Props {
   eyebrow: string;
@@ -57,10 +42,16 @@ const { eyebrow, heading, lead, coverAltPrefix, stackAriaLabelPrefix, projects, 
             <p class="project-tagline">{project.data.tagline}</p>
             <p class="project-summary">{project.data.summary}</p>
             <ul class="stack-list" aria-label={`${stackAriaLabelPrefix} ${project.data.title}`}>
-              {project.data.stack.map((item) => <li>{item}</li>)}
+              {project.data.stack.map((item: string) => <li>{item}</li>)}
             </ul>
             <div class="project-links">
-              {project.data.links.map((link) => <a href={link.href}>{link.label}</a>)}
+              {
+                project.data.links.map((link: { label: string; href: string }) => (
+                  <a href={link.href} target="_blank" rel="noreferrer">
+                    {link.label}
+                  </a>
+                ))
+              }
             </div>
           </div>
         </article>
@@ -73,7 +64,7 @@ const { eyebrow, heading, lead, coverAltPrefix, stackAriaLabelPrefix, projects, 
     {
       secondaryProjects.map((project) => (
         <li class="secondary-project-item">
-          <a href={project.data.links[0].href} class="secondary-project-title">
+          <a href={project.data.links[0].href} class="secondary-project-title" target="_blank" rel="noreferrer">
             {project.data.title}
           </a>
           <span class="secondary-project-meta">

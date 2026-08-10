@@ -99,10 +99,10 @@ export const en: SiteContent = {
     title: "Let's talk",
     body: "If you have a project in mind, or just want to connect, here I am.",
     links: [
-      { label: "Email", href: "mailto:amcp88@gmail.com", icon: "email", primary: true },
-      { label: "Phone", href: "tel:+34620100398", icon: "phone" },
-      { label: "LinkedIn", href: "https://www.linkedin.com/in/tcarrascosa", icon: "linkedin" },
-      { label: "GitHub", href: "https://github.com/tonocp", icon: "github" }
+      { label: "Email", href: "mailto:amcp88@gmail.com", icon: "email", primary: true, group: "cta" },
+      { label: "Phone", href: "tel:+34620100398", icon: "phone", group: "cta" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/tcarrascosa", icon: "linkedin", group: "social" },
+      { label: "GitHub", href: "https://github.com/tonocp", icon: "github", group: "social" }
     ]
   },
   footer: {
