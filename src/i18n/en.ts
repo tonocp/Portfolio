@@ -85,7 +85,7 @@ export const en: SiteContent = {
     lead: "Work that shows how I think and how I build.",
     coverAltPrefix: "Screenshot of",
     stackAriaLabelPrefix: "Technologies used in",
-    archiveLabel: "Also built"
+    secondaryLabel: "Also built"
   },
   contact: {
     eyebrow: "Contact",

@@ -16,4 +16,4 @@ cover: "../../../assets/projects/pipesApp.webp"
 theme: "amber"
 ---
 
-Proyecto de archivo.
+Pipes personalizados para que los datos se lean con sentido.

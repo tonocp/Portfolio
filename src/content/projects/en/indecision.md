@@ -16,4 +16,4 @@ cover: "../../../assets/projects/indecisionApp.webp"
 theme: "coral"
 ---
 
-Archive project.
+A random decision, resolved with a clean, reactive interface.

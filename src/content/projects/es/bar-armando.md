@@ -1,15 +1,15 @@
 ---
 title: "Bar Armando"
-tagline: "Promotional website built with HTML, CSS and JavaScript."
+tagline: "Web promocional en HTML, CSS y JavaScript."
 year: 2021
 stack:
   - "HTML"
   - "CSS"
   - "JavaScript"
-summary: "Simple, clear digital presence."
+summary: "Presencia digital sencilla y clara."
 role: "Frontend"
 links:
-  - label: "View project"
+  - label: "Ver proyecto"
     href: "https://bar-armando-tcp.netlify.app/"
 featured: false
 order: 17
@@ -17,4 +17,4 @@ cover: "../../../assets/projects/barArmando.webp"
 theme: "mint"
 ---
 
-Archive project.
+Una presencia digital directa, sin dependencias, pensada para durar.

@@ -17,4 +17,4 @@ cover: "../../../assets/projects/gifsApp.webp"
 theme: "ice"
 ---
 
-Proyecto de archivo.
+Una búsqueda rápida y sin ruido sobre una API externa real.

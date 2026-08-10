@@ -18,4 +18,4 @@ cover: "../../../assets/projects/heroesApp.webp"
 theme: "amber"
 ---
 
-Archive project.
+A complete CRUD, end to end, with no shortcuts or filler.

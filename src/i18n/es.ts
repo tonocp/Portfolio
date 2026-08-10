@@ -85,7 +85,7 @@ export const es: SiteContent = {
     lead: "Trabajos que muestran cómo pienso y cómo construyo.",
     coverAltPrefix: "Captura de",
     stackAriaLabelPrefix: "Tecnologías usadas en",
-    archiveLabel: "También he construido"
+    secondaryLabel: "También he construido"
   },
   contact: {
     eyebrow: "Contacto",

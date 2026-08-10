@@ -16,4 +16,4 @@ cover: "../../../assets/projects/pipesApp.webp"
 theme: "amber"
 ---
 
-Archive project.
+Custom pipes so the data reads with actual meaning.

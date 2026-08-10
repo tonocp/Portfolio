@@ -16,4 +16,4 @@ cover: "../../../assets/projects/paisesApp.webp"
 theme: "mint"
 ---
 
-Proyecto de archivo.
+Datos de países de todo el mundo, listos para explorar y comparar.

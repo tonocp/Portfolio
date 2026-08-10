@@ -23,12 +23,12 @@ const localeProjects = (await getCollection("projects"))
 
 type ProjectEntry = CollectionEntry<"projects">;
 
-const { projects, archiveProjects } = localeProjects.reduce(
-  (acc: { projects: ProjectEntry[]; archiveProjects: ProjectEntry[] }, project: ProjectEntry) => {
-    acc[project.data.featured ? "projects" : "archiveProjects"].push(project);
+const { projects, secondaryProjects } = localeProjects.reduce(
+  (acc: { projects: ProjectEntry[]; secondaryProjects: ProjectEntry[] }, project: ProjectEntry) => {
+    acc[project.data.featured ? "projects" : "secondaryProjects"].push(project);
     return acc;
   },
-  { projects: [], archiveProjects: [] }
+  { projects: [], secondaryProjects: [] }
 );
 ---
 
@@ -79,8 +79,8 @@ const { projects, archiveProjects } = localeProjects.reduce(
       coverAltPrefix={t.projects.coverAltPrefix}
       stackAriaLabelPrefix={t.projects.stackAriaLabelPrefix}
       projects={projects}
-      archiveLabel={t.projects.archiveLabel}
-      archiveProjects={archiveProjects}
+      secondaryLabel={t.projects.secondaryLabel}
+      secondaryProjects={secondaryProjects}
     />
     <div id="contacto" class="anchor-target" aria-hidden="true"></div>
     <ContactSection

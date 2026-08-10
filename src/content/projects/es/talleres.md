@@ -16,4 +16,4 @@ cover: "../../../assets/projects/talleresCarrascosa.webp"
 theme: "amber"
 ---
 
-Proyecto de archivo.
+Una web real, para un negocio real, sin florituras innecesarias.

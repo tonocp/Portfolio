@@ -77,7 +77,7 @@ export interface SiteContent {
     lead: string;
     coverAltPrefix: string;
     stackAriaLabelPrefix: string;
-    archiveLabel: string;
+    secondaryLabel: string;
   };
   contact: {
     eyebrow: string;

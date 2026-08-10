@@ -1,14 +1,14 @@
 ---
-title: "Gráficos con Ng2-Charts"
-tagline: "Visualización de datos con Ng2-Charts."
+title: "Charts with Ng2-Charts"
+tagline: "Data visualization with Ng2-Charts."
 year: 2022
 stack:
   - "Angular"
   - "Ng2-Charts"
-summary: "Gráficos para una lectura rápida de la información."
+summary: "Charts for a quick read of the data."
 role: "Frontend"
 links:
-  - label: "Ver proyecto"
+  - label: "View project"
     href: "https://graficas-tcp.herokuapp.com/"
 featured: false
 order: 15
@@ -16,4 +16,4 @@ cover: "../../../assets/projects/graficosApp.webp"
 theme: "coral"
 ---
 
-Proyecto de archivo.
+Charts built to be read at a glance, not to decorate.

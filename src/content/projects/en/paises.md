@@ -16,4 +16,4 @@ cover: "../../../assets/projects/paisesApp.webp"
 theme: "mint"
 ---
 
-Archive project.
+Country data from around the world, ready to explore and compare.

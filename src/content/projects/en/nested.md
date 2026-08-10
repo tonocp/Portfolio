@@ -16,4 +16,4 @@ cover: "../../../assets/projects/nestedApp.webp"
 theme: "ice"
 ---
 
-Archive project.
+Selectors that depend on each other, without losing state along the way.

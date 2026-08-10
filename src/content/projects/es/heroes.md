@@ -18,4 +18,4 @@ cover: "../../../assets/projects/heroesApp.webp"
 theme: "amber"
 ---
 
-Proyecto de archivo.
+Un CRUD completo, de extremo a extremo, sin atajos ni relleno.

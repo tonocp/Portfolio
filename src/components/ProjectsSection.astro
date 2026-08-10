@@ -26,11 +26,11 @@ interface Props {
   coverAltPrefix: string;
   stackAriaLabelPrefix: string;
   projects: Project[];
-  archiveLabel: string;
-  archiveProjects: Project[];
+  secondaryLabel: string;
+  secondaryProjects: Project[];
 }
 
-const { eyebrow, heading, lead, coverAltPrefix, stackAriaLabelPrefix, projects, archiveLabel, archiveProjects } =
+const { eyebrow, heading, lead, coverAltPrefix, stackAriaLabelPrefix, projects, secondaryLabel, secondaryProjects } =
   Astro.props;
 ---
 
@@ -68,15 +68,15 @@ const { eyebrow, heading, lead, coverAltPrefix, stackAriaLabelPrefix, projects, 
     }
   </div>
 
-  <p class="stack-group-label archive-label">{archiveLabel}</p>
-  <ul class="archive-list">
+  <p class="stack-group-label secondary-project-label">{secondaryLabel}</p>
+  <ul class="secondary-project-list">
     {
-      archiveProjects.map((project) => (
-        <li class="archive-item">
-          <a href={project.data.links[0].href} class="archive-title">
+      secondaryProjects.map((project) => (
+        <li class="secondary-project-item">
+          <a href={project.data.links[0].href} class="secondary-project-title">
             {project.data.title}
           </a>
-          <span class="archive-meta">
+          <span class="secondary-project-meta">
             {project.data.stack.join(" · ")} · {project.data.year}
           </span>
         </li>
