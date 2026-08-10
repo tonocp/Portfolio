@@ -1,13 +1,5 @@
 ---
-interface Metric {
-  value: string;
-  label: string;
-}
-
-interface Action {
-  label: string;
-  href: string;
-}
+import type { Action, Metric } from "../data/site";
 
 interface Props {
   eyebrow: string;

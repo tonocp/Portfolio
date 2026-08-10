@@ -1,27 +1,32 @@
 export const locales = ["es", "en"] as const;
 export type Locale = (typeof locales)[number];
 
-interface NavLink {
+export interface NavLink {
   label: string;
   href: string;
 }
 
-interface Action {
+export interface Action {
   label: string;
   href: string;
 }
 
-interface Metric {
+export interface Metric {
   value: string;
   label: string;
 }
 
-interface Capability {
+export interface Capability {
   title: string;
   description: string;
 }
 
-interface ContactLink {
+export interface StackGroup {
+  label: string;
+  items: readonly string[];
+}
+
+export interface ContactLink {
   label: string;
   href: string;
   icon?: "github" | "linkedin" | "email" | "phone";
@@ -62,7 +67,7 @@ interface SiteContent {
     stackPrincipalLabel: string;
     stackPrincipal: readonly string[];
     stackSecondaryLabel: string;
-    stackGroups: readonly { label: string; items: readonly string[] }[];
+    stackGroups: readonly StackGroup[];
     stackAriaLabelPrefix: string;
     trademarkNote: string;
   };
@@ -83,6 +88,23 @@ interface SiteContent {
   footer: {
     builtWith: string;
   };
+}
+
+// Technology names are never translated — only the group labels are (e.g. "Datos" vs "Data") —
+// so the item lists live here once and get paired with each locale's labels below.
+const stackPrincipal = ["Java", "Spring Boot", "Vue", "Capacitor", "PostgreSQL", "GitLab CI", "Docker", "Claude", "Codex"];
+
+const stackGroupItems = [
+  ["TypeScript", "Angular", "Astro"],
+  ["Node.js", "NestJS", "Python", "FastAPI"],
+  ["MySQL", "MSSQL", "MongoDB"],
+  ["Kubernetes", "GitHub Actions"],
+  ["Google Cloud", "Azure", "AWS", "Cloudflare"],
+  ["RabbitMQ", "FIWARE", "Raspberry Pi"]
+];
+
+function buildStackGroups(labels: readonly string[]): StackGroup[] {
+  return labels.map((label, i) => ({ label, items: stackGroupItems[i] }));
 }
 
 const es: SiteContent = {
@@ -157,16 +179,9 @@ const es: SiteContent = {
       }
     ],
     stackPrincipalLabel: "Actualmente trabajo con",
-    stackPrincipal: ["Java", "Spring Boot", "Vue", "Capacitor", "PostgreSQL", "GitLab CI", "Docker", "Claude", "Codex"],
+    stackPrincipal,
     stackSecondaryLabel: "También he trabajado con",
-    stackGroups: [
-      { label: "Frontend", items: ["TypeScript", "Angular", "Astro"] },
-      { label: "Backend", items: ["Node.js", "NestJS", "Python", "FastAPI"] },
-      { label: "Datos", items: ["MySQL", "MSSQL", "MongoDB"] },
-      { label: "DevOps & CI/CD", items: ["Kubernetes", "GitHub Actions"] },
-      { label: "Cloud", items: ["Google Cloud", "Azure", "AWS", "Cloudflare"] },
-      { label: "IoT", items: ["RabbitMQ", "FIWARE", "Raspberry Pi"] }
-    ],
+    stackGroups: buildStackGroups(["Frontend", "Backend", "Datos", "DevOps & CI/CD", "Cloud", "IoT"]),
     stackAriaLabelPrefix: "Tecnologías de",
     trademarkNote: "Las marcas y logotipos pertenecen a sus respectivos titulares."
   },
@@ -266,16 +281,9 @@ const en: SiteContent = {
       }
     ],
     stackPrincipalLabel: "Currently working with",
-    stackPrincipal: ["Java", "Spring Boot", "Vue", "Capacitor", "PostgreSQL", "GitLab CI", "Docker", "Claude", "Codex"],
+    stackPrincipal,
     stackSecondaryLabel: "Also worked with",
-    stackGroups: [
-      { label: "Frontend", items: ["TypeScript", "Angular", "Astro"] },
-      { label: "Backend", items: ["Node.js", "NestJS", "Python", "FastAPI"] },
-      { label: "Data", items: ["MySQL", "MSSQL", "MongoDB"] },
-      { label: "DevOps & CI/CD", items: ["Kubernetes", "GitHub Actions"] },
-      { label: "Cloud", items: ["Google Cloud", "Azure", "AWS", "Cloudflare"] },
-      { label: "IoT", items: ["RabbitMQ", "FIWARE", "Raspberry Pi"] }
-    ],
+    stackGroups: buildStackGroups(["Frontend", "Backend", "Data", "DevOps & CI/CD", "Cloud", "IoT"]),
     stackAriaLabelPrefix: "Technologies used in",
     trademarkNote: "Trademarks and logos belong to their respective owners."
   },

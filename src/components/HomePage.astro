@@ -23,8 +23,15 @@ const localeProjects = (await getCollection("projects"))
   )
   .sort((a: CollectionEntry<"projects">, b: CollectionEntry<"projects">) => a.data.order - b.data.order);
 
-const projects = localeProjects.filter((project: CollectionEntry<"projects">) => project.data.featured);
-const archiveProjects = localeProjects.filter((project: CollectionEntry<"projects">) => !project.data.featured);
+type ProjectEntry = CollectionEntry<"projects">;
+
+const { projects, archiveProjects } = localeProjects.reduce(
+  (acc: { projects: ProjectEntry[]; archiveProjects: ProjectEntry[] }, project: ProjectEntry) => {
+    acc[project.data.featured ? "projects" : "archiveProjects"].push(project);
+    return acc;
+  },
+  { projects: [], archiveProjects: [] }
+);
 ---
 
 <BaseLayout title={t.seo.title} description={t.seo.description} locale={locale}>

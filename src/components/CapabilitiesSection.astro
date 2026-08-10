@@ -1,15 +1,6 @@
 ---
 import StackIcon from "./StackIcon.astro";
-
-interface Capability {
-  title: string;
-  description: string;
-}
-
-interface StackGroup {
-  label: string;
-  items: readonly string[];
-}
+import type { Capability, StackGroup } from "../data/site";
 
 interface Props {
   eyebrow: string;
