@@ -13,7 +13,7 @@ links:
     href: "https://gifs-app-tcp.netlify.app/"
 featured: false
 order: 11
-cover: "/img/gifsApp.webp"
+cover: "../../../assets/projects/gifsApp.webp"
 theme: "ice"
 ---
 

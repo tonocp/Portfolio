@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
 interface Project {
   id: string;
   data: {
@@ -11,7 +14,7 @@ interface Project {
     links: { label: string; href: string }[];
     featured: boolean;
     order: number;
-    cover: string;
+    cover: ImageMetadata;
     theme: "amber" | "ice" | "coral" | "mint";
   };
 }
@@ -43,7 +46,7 @@ const { eyebrow, heading, lead, coverAltPrefix, stackAriaLabelPrefix, projects, 
       projects.map((project) => (
         <article class={`project-card theme-${project.data.theme}`}>
           <div class="project-media">
-            <img src={project.data.cover} alt={`${coverAltPrefix} ${project.data.title}`} loading="lazy" />
+            <Image src={project.data.cover} alt={`${coverAltPrefix} ${project.data.title}`} loading="lazy" />
           </div>
           <div class="project-content">
             <div class="project-meta">

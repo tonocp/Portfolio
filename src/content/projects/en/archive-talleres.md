@@ -12,7 +12,7 @@ links:
     href: "http://www.tallerescarrascosa.com/"
 featured: false
 order: 18
-cover: "/img/talleresCarrascosa.webp"
+cover: "../../../assets/projects/talleresCarrascosa.webp"
 theme: "amber"
 ---
 

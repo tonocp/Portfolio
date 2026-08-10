@@ -14,7 +14,7 @@ links:
     href: "https://crud-heroes.herokuapp.com/"
 featured: true
 order: 1
-cover: "/img/heroesApp.webp"
+cover: "../../../assets/projects/heroesApp.webp"
 theme: "amber"
 ---
 

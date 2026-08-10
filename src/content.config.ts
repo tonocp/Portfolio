@@ -9,19 +9,20 @@ const linkSchema = z.object({
 
 const projects = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/projects" }),
-  schema: z.object({
-    title: z.string(),
-    tagline: z.string(),
-    year: z.number().int(),
-    stack: z.array(z.string()).min(1),
-    summary: z.string(),
-    role: z.string(),
-    links: z.array(linkSchema).min(1),
-    featured: z.boolean(),
-    order: z.number().int(),
-    cover: z.string(),
-    theme: z.enum(["amber", "ice", "coral", "mint"])
-  })
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      tagline: z.string(),
+      year: z.number().int(),
+      stack: z.array(z.string()).min(1),
+      summary: z.string(),
+      role: z.string(),
+      links: z.array(linkSchema).min(1),
+      featured: z.boolean(),
+      order: z.number().int(),
+      cover: image(),
+      theme: z.enum(["amber", "ice", "coral", "mint"])
+    })
 });
 
 export const collections = {
