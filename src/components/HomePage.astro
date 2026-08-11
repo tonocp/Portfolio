@@ -53,16 +53,24 @@ const { projects, secondaryProjects } = localeProjects.reduce(
     const nav = document.getElementById("site-nav");
 
     if (toggle && nav) {
+      document.body.classList.add("nav-js-ready");
+
+      let focusable: HTMLElement[] = [];
+
       const closeMenu = () => {
+        const wasOpen = toggle.getAttribute("aria-expanded") === "true";
         toggle.setAttribute("aria-expanded", "false");
         nav.classList.remove("is-open");
         document.body.classList.remove("nav-open");
+        if (wasOpen) toggle.focus();
       };
 
       const openMenu = () => {
         toggle.setAttribute("aria-expanded", "true");
         nav.classList.add("is-open");
         document.body.classList.add("nav-open");
+        focusable = Array.from(nav.querySelectorAll<HTMLElement>("a[href]"));
+        focusable[0]?.focus();
       };
 
       toggle.addEventListener("click", () => {
@@ -79,7 +87,24 @@ const { projects, secondaryProjects } = localeProjects.reduce(
       });
 
       document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") closeMenu();
+        if (toggle.getAttribute("aria-expanded") !== "true") return;
+
+        if (event.key === "Escape") {
+          closeMenu();
+          return;
+        }
+
+        if (event.key === "Tab" && focusable.length > 0) {
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+          }
+        }
       });
     }
   </script>
