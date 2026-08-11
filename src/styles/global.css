@@ -612,6 +612,7 @@ h3 {
   color: var(--text);
   font-size: 0.85rem;
   font-weight: 600;
+  text-transform: uppercase;
   white-space: nowrap;
 }
 
@@ -913,7 +914,7 @@ h3 {
     padding: 5rem 0;
   }
 
-  .contact-section {
+  .section.contact-section {
     padding-bottom: 0;
   }
 
@@ -926,6 +927,11 @@ h3 {
   .project-content,
   .contact-card {
     padding: 1.25rem;
+  }
+
+  .secondary-project-item {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .hero-copy,
