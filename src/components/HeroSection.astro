@@ -17,13 +17,15 @@ const { eyebrow, title, intro, primaryCta, secondaryCta, metrics, metricsAriaLab
 ---
 
 <section class="hero section shell">
-  <div class="hero-copy">
-    <p class="eyebrow">{eyebrow}</p>
-    <h1>{title}</h1>
-    <p class="hero-intro">{intro}</p>
-    <div class="hero-actions">
-      <a class="button button-primary" href={primaryCta.href}>{primaryCta.label}</a>
-      <a class="button button-secondary" href={secondaryCta.href}>{secondaryCta.label}</a>
+  <div class="hero-fold">
+    <div class="hero-copy">
+      <p class="eyebrow">{eyebrow}</p>
+      <h1>{title}</h1>
+      <p class="hero-intro">{intro}</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href={primaryCta.href}>{primaryCta.label}</a>
+        <a class="button button-secondary" href={secondaryCta.href}>{secondaryCta.label}</a>
+      </div>
     </div>
   </div>
 
@@ -48,7 +50,7 @@ const { eyebrow, title, intro, primaryCta, secondaryCta, metrics, metricsAriaLab
 
 <style>
   .signal-kicker {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     margin-bottom: 0.75rem;
   }
 </style>

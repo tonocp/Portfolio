@@ -43,6 +43,7 @@ export interface SiteContent {
   nav: {
     brand: string;
     ariaLabel: string;
+    menuLabel: string;
     links: readonly NavLink[];
   };
   hero: {
