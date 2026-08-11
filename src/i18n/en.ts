@@ -9,6 +9,7 @@ export const en: SiteContent = {
   nav: {
     brand: "TCarrascosa.dev",
     ariaLabel: "Main",
+    menuLabel: "Menu",
     links: [
       { label: "About", href: "#sobre-mi" },
       { label: "Stack", href: "#stack" },
