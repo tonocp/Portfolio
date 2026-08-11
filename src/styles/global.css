@@ -759,23 +759,33 @@ h3 {
 }
 
 @media (max-width: 900px) {
-  .section-split,
   .project-card {
     grid-template-columns: 1fr;
   }
 
-  .capability-grid {
-    grid-template-columns: 1fr;
-  }
-
   .stack-groups {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     justify-content: normal;
   }
 
   .project-media img {
     min-height: 240px;
     max-height: 340px;
+  }
+
+  .metric-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .metric-card {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .metric-card:nth-child(n + 3) {
+    padding-top: 1rem;
+    border-top: 1px solid var(--line);
   }
 }
 
@@ -878,8 +888,11 @@ h3 {
     width: 100%;
   }
 
+  .metric-grid {
+    grid-template-columns: 1fr;
+  }
+
   .metric-card {
-    flex-basis: 100%;
     padding-left: 0;
     padding-top: 1rem;
     border-left: none;
@@ -897,6 +910,12 @@ h3 {
 
   .contact-section {
     padding-bottom: 0;
+  }
+
+  .section-split,
+  .capability-grid,
+  .stack-groups {
+    grid-template-columns: 1fr;
   }
 
   .project-content,
