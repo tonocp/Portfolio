@@ -850,7 +850,7 @@ h3 {
     transition: opacity 180ms ease, transform 180ms ease, visibility 180ms;
   }
 
-  .topbar nav.is-open {
+  body.nav-js-ready .topbar nav.is-open {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
