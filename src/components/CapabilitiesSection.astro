@@ -30,7 +30,7 @@ const {
 ---
 
 <section class="section shell capabilities">
-  <div class="section-heading">
+  <div class="section-heading" data-reveal>
     <p class="eyebrow">{eyebrow}</p>
     <h2>{title}</h2>
     <p class="section-lead">{lead}</p>
@@ -38,8 +38,8 @@ const {
 
   <div class="capability-grid">
     {
-      items.map((item) => (
-        <article class="capability-card">
+      items.map((item, index) => (
+        <article class="capability-card" data-reveal style={`--reveal-delay: ${index * 80}ms`}>
           <h3>{item.title}</h3>
           <p>{item.description}</p>
         </article>
@@ -47,14 +47,14 @@ const {
     }
   </div>
 
-  <div class="stack-block">
+  <div class="stack-block" data-reveal>
     <p class="panel-kicker stack-principal-label">{stackPrincipalLabel}</p>
     <ul class="stack-cloud stack-cloud-principal" aria-label={stackPrincipalLabel}>
       {stackPrincipal.map((item) => <StackIcon name={item} />)}
     </ul>
   </div>
 
-  <div class="stack-block">
+  <div class="stack-block" data-reveal style="--reveal-delay: 120ms">
     <p class="stack-group-label stack-secondary-label">{stackSecondaryLabel}</p>
     <div class="stack-groups">
       {

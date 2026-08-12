@@ -20,7 +20,7 @@ const { eyebrow, heading, lead, coverAltPrefix, stackAriaLabelPrefix, projects, 
 ---
 
 <section class="section shell">
-  <div class="section-heading projects-heading">
+  <div class="section-heading projects-heading" data-reveal>
     <p class="eyebrow">{eyebrow}</p>
     <h2>{heading}</h2>
     <p class="section-lead">{lead}</p>
@@ -28,8 +28,8 @@ const { eyebrow, heading, lead, coverAltPrefix, stackAriaLabelPrefix, projects, 
 
   <div class="projects-grid">
     {
-      projects.map((project) => (
-        <article class={`project-card theme-${project.data.theme}`}>
+      projects.map((project, index) => (
+        <article class={`project-card theme-${project.data.theme}`} data-reveal style={`--reveal-delay: ${index * 100}ms`}>
           <a
             class="project-media"
             href={project.data.links[0].href}
@@ -65,8 +65,8 @@ const { eyebrow, heading, lead, coverAltPrefix, stackAriaLabelPrefix, projects, 
     }
   </div>
 
-  <p class="stack-group-label secondary-project-label">{secondaryLabel}</p>
-  <ul class="secondary-project-list">
+  <p class="stack-group-label secondary-project-label" data-reveal>{secondaryLabel}</p>
+  <ul class="secondary-project-list" data-reveal>
     {
       secondaryProjects.map((project) => (
         <li class="secondary-project-item">
