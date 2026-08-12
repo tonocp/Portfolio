@@ -55,7 +55,6 @@ export interface SiteContent {
     secondaryCta: Action;
     metricsAriaLabel: string;
     metrics: readonly Metric[];
-    nowKicker: string;
     nowText: string;
   };
   about: {

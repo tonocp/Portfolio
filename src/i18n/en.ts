@@ -37,7 +37,6 @@ export const en: SiteContent = {
       { value: "Logroño · La Rioja\nRemote · Hybrid", label: "Location" },
       { value: "Spanish · Native\nEnglish · B2", label: "Languages" }
     ],
-    nowKicker: "Right now",
     nowText: "Always learning something new, both professionally and personally."
   },
   about: {

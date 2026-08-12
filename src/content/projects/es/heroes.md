@@ -15,7 +15,7 @@ links:
 featured: true
 order: 3
 cover: "../../../assets/projects/heroesApp.webp"
-theme: "amber"
+theme: "violet"
 ---
 
 Un CRUD completo, de extremo a extremo, sin atajos ni relleno.

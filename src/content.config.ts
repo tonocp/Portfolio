@@ -21,7 +21,7 @@ const projects = defineCollection({
       featured: z.boolean(),
       order: z.number().int(),
       cover: image(),
-      theme: z.enum(["amber", "ice", "coral", "mint"])
+      theme: z.enum(["amber", "ice", "coral", "mint", "violet"])
     })
 });
 
