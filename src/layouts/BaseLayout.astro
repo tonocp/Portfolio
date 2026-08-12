@@ -2,7 +2,7 @@
 import { getAbsoluteLocaleUrl } from "astro:i18n";
 
 import "../styles/global.css";
-import { defaultLocale, locales, type Locale } from "../i18n";
+import { defaultLocale, locales, siteContent, type Locale } from "../i18n";
 
 interface Props {
   title: string;
@@ -11,7 +11,25 @@ interface Props {
 }
 
 const { title, description, locale } = Astro.props;
+const t = siteContent[locale];
 const defaultLocaleUrl = getAbsoluteLocaleUrl(defaultLocale, "/");
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const ogImageUrl = new URL("/og-image.jpg", Astro.site);
+
+const ogLocales: Record<Locale, string> = { es: "es_ES", en: "en_US" };
+const alternateLocales = locales.filter((entry) => entry !== locale);
+
+const socialLinks = t.contact.links.filter((link) => link.group === "social");
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: t.hero.title,
+  url: Astro.site?.toString(),
+  jobTitle: t.hero.eyebrow,
+  sameAs: socialLinks.map((link) => link.href)
+};
 ---
 
 <!doctype html>
@@ -21,6 +39,8 @@ const defaultLocaleUrl = getAbsoluteLocaleUrl(defaultLocale, "/");
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="theme-color" content="#07111f" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,6 +50,25 @@ const defaultLocaleUrl = getAbsoluteLocaleUrl(defaultLocale, "/");
     {locales.map((entry) => <link rel="alternate" hreflang={entry} href={getAbsoluteLocaleUrl(entry, "/")} />)}
     <link rel="alternate" hreflang="x-default" href={defaultLocaleUrl} />
     <title>{title}</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={t.nav.brand} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
+    <meta property="og:locale" content={ogLocales[locale]} />
+    {alternateLocales.map((entry) => <meta property="og:locale:alternate" content={ogLocales[entry]} />)}
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(personJsonLd)} is:inline />
   </head>
   <body>
     <slot />

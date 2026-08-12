@@ -46,7 +46,8 @@ const socialIcons: Record<string, { viewBox: string; path: string }> = {
           contactLinks.map((link) => (
             <a
               class={`button ${link.primary ? "button-primary" : "button-secondary"}`}
-              href={link.href}
+              href={link.obfuscate ? "#" : link.href}
+              data-obfuscated={link.obfuscate}
               target="_blank"
               rel="noreferrer"
             >
@@ -100,3 +101,20 @@ const socialIcons: Record<string, { viewBox: string; path: string }> = {
     </footer>
   </div>
 </section>
+
+<script>
+  import { obfuscatedContact } from "../data/contactSecrets";
+
+  const decode = (value: string) => atob(value);
+
+  const targets: Partial<Record<"email" | "phone", string>> = {
+    email: `mailto:${decode(obfuscatedContact.email)}`,
+    phone: `tel:${decode(obfuscatedContact.phone)}`
+  };
+
+  document.querySelectorAll<HTMLAnchorElement>("[data-obfuscated]").forEach((anchor) => {
+    const key = anchor.dataset.obfuscated as "email" | "phone" | undefined;
+    const href = key && targets[key];
+    if (href) anchor.href = href;
+  });
+</script>

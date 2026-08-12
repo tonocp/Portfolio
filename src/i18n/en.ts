@@ -11,10 +11,10 @@ export const en: SiteContent = {
     ariaLabel: "Main",
     menuLabel: "Menu",
     links: [
-      { label: "About", href: "#sobre-mi" },
+      { label: "About", href: "#about" },
       { label: "Stack", href: "#stack" },
-      { label: "Projects", href: "#proyectos" },
-      { label: "Contact", href: "#contacto" }
+      { label: "Projects", href: "#projects" },
+      { label: "Contact", href: "#contact" }
     ]
   },
   hero: {
@@ -24,11 +24,11 @@ export const en: SiteContent = {
       "I design, build and deploy software end to end, with a focus on quality, security and performance at every stage of development.",
     primaryCta: {
       label: "View projects",
-      href: "#proyectos"
+      href: "#projects"
     },
     secondaryCta: {
       label: "Contact",
-      href: "#contacto"
+      href: "#contact"
     },
     metricsAriaLabel: "Quick facts",
     metrics: [
@@ -100,8 +100,8 @@ export const en: SiteContent = {
     title: "Let's talk",
     body: "If you have a project in mind, or just want to connect, here I am.",
     links: [
-      { label: "Email", href: "mailto:amcp88@gmail.com", icon: "email", primary: true, group: "cta" },
-      { label: "Phone", href: "tel:+34620100398", icon: "phone", group: "cta" },
+      { label: "Email", obfuscate: "email", icon: "email", primary: true, group: "cta" },
+      { label: "Phone", obfuscate: "phone", icon: "phone", group: "cta" },
       { label: "LinkedIn", href: "https://www.linkedin.com/in/tcarrascosa", icon: "linkedin", group: "social" },
       { label: "GitHub", href: "https://github.com/tonocp", icon: "github", group: "social" }
     ]

@@ -29,7 +29,8 @@ export interface StackGroup {
 
 export interface ContactLink {
   label: string;
-  href: string;
+  href?: string;
+  obfuscate?: "email" | "phone";
   icon?: "github" | "linkedin" | "email" | "phone";
   primary?: boolean;
   group: "cta" | "social";

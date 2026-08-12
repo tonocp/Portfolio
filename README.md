@@ -51,3 +51,7 @@ La aplicación quedará disponible en `http://localhost:4321`.
 Los proyectos se definen en la colección `projects` usando frontmatter tipado, con una versión por idioma (`src/content/projects/es/*.md` y `src/content/projects/en/*.md`). Para destacar uno en la home, basta con marcar `featured: true` y ajustar `order`. La portada (`cover`) apunta a un archivo en `src/assets/projects/`.
 
 Los textos generales de la web viven en `src/i18n/es.ts` y `src/i18n/en.ts`, cada uno tipado contra `src/i18n/types.ts`, así que es fácil cambiar copies, CTAs o bloques de presentación sin tocar el layout ni el otro idioma.
+
+## Licencia
+
+Todos los derechos reservados (ver [`LICENSE`](./LICENSE)). Este repositorio es público solo como referencia de mi trabajo; no está permitido copiar, modificar, redistribuir ni reutilizar el código, el contenido o los assets sin permiso previo.
