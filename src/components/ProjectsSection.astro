@@ -30,9 +30,15 @@ const { eyebrow, heading, lead, coverAltPrefix, stackAriaLabelPrefix, projects, 
     {
       projects.map((project) => (
         <article class={`project-card theme-${project.data.theme}`}>
-          <div class="project-media">
-            <Image src={project.data.cover} alt={`${coverAltPrefix} ${project.data.title}`} loading="lazy" />
-          </div>
+          <a
+            class="project-media"
+            href={project.data.links[0].href}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${coverAltPrefix} ${project.data.title}`}
+          >
+            <Image src={project.data.cover} alt="" loading="lazy" />
+          </a>
           <div class="project-content">
             <div class="project-meta">
               <span>{project.data.year}</span>

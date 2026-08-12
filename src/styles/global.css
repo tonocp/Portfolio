@@ -482,13 +482,21 @@ h3 {
 }
 
 .project-media {
+  display: block;
   min-height: 100%;
+  overflow: hidden;
 }
 
 .project-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 220ms ease;
+}
+
+.project-media:hover img,
+.project-media:focus-visible img {
+  transform: scale(1.03);
 }
 
 .project-content {

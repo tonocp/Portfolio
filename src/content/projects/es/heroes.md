@@ -7,13 +7,13 @@ stack:
   - "Express"
   - "Angular"
   - "Node.js"
-summary: "Operaciones CRUD completas en una estructura full stack."
-role: "Full stack"
+summary: "Operaciones CRUD completas en una estructura full-stack."
+role: "Full-stack"
 links:
   - label: "Ver proyecto"
     href: "https://crud-heroes.herokuapp.com/"
 featured: true
-order: 1
+order: 3
 cover: "../../../assets/projects/heroesApp.webp"
 theme: "amber"
 ---

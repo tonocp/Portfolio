@@ -4,7 +4,7 @@ import type { SiteContent } from "./types";
 export const en: SiteContent = {
   seo: {
     title: "Toño Carrascosa Prieto | Senior Software Engineer",
-    description: "Portfolio of Toño Carrascosa Prieto, Senior Software Engineer - Fullstack Developer."
+    description: "Portfolio of Toño Carrascosa Prieto, Senior Software Engineer - Full-Stack Developer."
   },
   nav: {
     brand: "TCarrascosa.dev",
@@ -33,7 +33,7 @@ export const en: SiteContent = {
     metricsAriaLabel: "Quick facts",
     metrics: [
       { value: "5+ years", label: "Experience" },
-      { value: "Fullstack · DevOps", label: "Tech Stack" },
+      { value: "Full-Stack · DevOps", label: "Tech Stack" },
       { value: "Logroño · La Rioja\nRemote · Hybrid", label: "Location" },
       { value: "Spanish · Native\nEnglish · B2", label: "Languages" }
     ],
@@ -52,7 +52,7 @@ export const en: SiteContent = {
   capabilities: {
     eyebrow: "Stack",
     title: "How I work",
-    lead: "A balanced full stack developer, focused on building an effective, reliable product at every stage.",
+    lead: "A balanced full-stack developer, focused on building an effective, reliable product at every stage.",
     items: [
       {
         title: "Frontend & Mobile",

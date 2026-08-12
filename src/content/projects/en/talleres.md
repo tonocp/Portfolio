@@ -1,17 +1,17 @@
 ---
-title: "Joomla Talleres Carrascosa"
+title: "Talleres Carrascosa"
 tagline: "Corporate website built with Joomla."
 year: 2020
 stack:
   - "Joomla"
   - "CMS"
 summary: "Online presence for a real business."
-role: "Web development"
+role: "CMS"
 links:
   - label: "View project"
     href: "http://www.tallerescarrascosa.com/"
-featured: false
-order: 18
+featured: true
+order: 5
 cover: "../../../assets/projects/talleresCarrascosa.webp"
 theme: "amber"
 ---
