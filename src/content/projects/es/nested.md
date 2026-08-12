@@ -11,7 +11,7 @@ links:
   - label: "Ver proyecto"
     href: "https://nested-selectors-tcp.netlify.app/"
 featured: false
-order: 14
+order: 10
 cover: "../../../assets/projects/nestedApp.webp"
 theme: "ice"
 ---

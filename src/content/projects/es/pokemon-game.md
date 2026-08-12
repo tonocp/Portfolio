@@ -12,7 +12,7 @@ links:
   - label: "Ver proyecto"
     href: "https://pokemon-tcp.netlify.app/"
 featured: true
-order: 3
+order: 2
 cover: "../../../assets/projects/pokemonApp.webp"
 theme: "coral"
 ---

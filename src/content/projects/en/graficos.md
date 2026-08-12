@@ -11,7 +11,7 @@ links:
   - label: "View project"
     href: "https://graficas-tcp.herokuapp.com/"
 featured: false
-order: 15
+order: 11
 cover: "../../../assets/projects/graficosApp.webp"
 theme: "coral"
 ---
