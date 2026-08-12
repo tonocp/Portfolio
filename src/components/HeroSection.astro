@@ -9,16 +9,15 @@ interface Props {
   secondaryCta: Action;
   metrics: readonly Metric[];
   metricsAriaLabel: string;
-  nowKicker: string;
   nowText: string;
 }
 
-const { eyebrow, title, intro, primaryCta, secondaryCta, metrics, metricsAriaLabel, nowKicker, nowText } = Astro.props;
+const { eyebrow, title, intro, primaryCta, secondaryCta, metrics, metricsAriaLabel, nowText } = Astro.props;
 ---
 
 <section class="hero section shell">
   <div class="hero-fold">
-    <div class="hero-copy">
+    <div class="hero-copy" data-reveal>
       <p class="eyebrow">{eyebrow}</p>
       <h1>{title}</h1>
       <p class="hero-intro">{intro}</p>
@@ -29,7 +28,7 @@ const { eyebrow, title, intro, primaryCta, secondaryCta, metrics, metricsAriaLab
     </div>
   </div>
 
-  <div class="hero-panel">
+  <div class="hero-panel" data-reveal style="--reveal-delay: 150ms">
     <ul class="metric-grid" aria-label={metricsAriaLabel}>
       {
         metrics.map((metric) => (
@@ -40,17 +39,17 @@ const { eyebrow, title, intro, primaryCta, secondaryCta, metrics, metricsAriaLab
         ))
       }
     </ul>
-    <p class="panel-kicker signal-kicker">{nowKicker}</p>
-    <div class="signal-card">
-      <span class="signal-dot" aria-hidden="true"></span>
-      <p>{nowText}</p>
+    <div class="terminal-window">
+      <div class="terminal-titlebar">
+        <span class="terminal-dot dot-red" aria-hidden="true"></span>
+        <span class="terminal-dot dot-yellow" aria-hidden="true"></span>
+        <span class="terminal-dot dot-green" aria-hidden="true"></span>
+        <span class="terminal-titlebar-label">~/status</span>
+      </div>
+      <div class="signal-card">
+        <span class="signal-dot" aria-hidden="true"></span>
+        <p>{nowText}</p>
+      </div>
     </div>
   </div>
 </section>
-
-<style>
-  .signal-kicker {
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
-  }
-</style>

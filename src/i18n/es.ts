@@ -37,7 +37,6 @@ export const es: SiteContent = {
       { value: "Logroño · La Rioja\nRemoto · Híbrido", label: "Ubicación" },
       { value: "Español · Nativo\nInglés · B2", label: "Idiomas" }
     ],
-    nowKicker: "Ahora mismo",
     nowText: "Siempre aprendiendo algo nuevo, tanto en lo profesional como en lo personal."
   },
   about: {
