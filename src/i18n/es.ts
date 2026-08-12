@@ -11,10 +11,10 @@ export const es: SiteContent = {
     ariaLabel: "Principal",
     menuLabel: "Menú",
     links: [
-      { label: "Sobre mí", href: "#sobre-mi" },
+      { label: "Sobre mí", href: "#about" },
       { label: "Stack", href: "#stack" },
-      { label: "Proyectos", href: "#proyectos" },
-      { label: "Contacto", href: "#contacto" }
+      { label: "Proyectos", href: "#projects" },
+      { label: "Contacto", href: "#contact" }
     ]
   },
   hero: {
@@ -24,11 +24,11 @@ export const es: SiteContent = {
       "Diseño, construyo y despliego software de principio a fin, poniendo el foco en la calidad, la seguridad y el rendimiento en cada etapa del desarrollo.",
     primaryCta: {
       label: "Ver proyectos",
-      href: "#proyectos"
+      href: "#projects"
     },
     secondaryCta: {
       label: "Contactar",
-      href: "#contacto"
+      href: "#contact"
     },
     metricsAriaLabel: "Ficha rápida",
     metrics: [

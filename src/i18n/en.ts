@@ -11,10 +11,10 @@ export const en: SiteContent = {
     ariaLabel: "Main",
     menuLabel: "Menu",
     links: [
-      { label: "About", href: "#sobre-mi" },
+      { label: "About", href: "#about" },
       { label: "Stack", href: "#stack" },
-      { label: "Projects", href: "#proyectos" },
-      { label: "Contact", href: "#contacto" }
+      { label: "Projects", href: "#projects" },
+      { label: "Contact", href: "#contact" }
     ]
   },
   hero: {
@@ -24,11 +24,11 @@ export const en: SiteContent = {
       "I design, build and deploy software end to end, with a focus on quality, security and performance at every stage of development.",
     primaryCta: {
       label: "View projects",
-      href: "#proyectos"
+      href: "#projects"
     },
     secondaryCta: {
       label: "Contact",
-      href: "#contacto"
+      href: "#contact"
     },
     metricsAriaLabel: "Quick facts",
     metrics: [
