@@ -1,21 +1,21 @@
 ---
 title: "MEAN CRUD SuperHeroes"
-tagline: "CRUD completo sobre stack MEAN."
+tagline: "CRUD completo sobre stack MEAN, con autenticación JWT."
 year: 2021
 stack:
   - "MongoDB"
   - "Express"
   - "Angular"
   - "Node.js"
-summary: "Operaciones CRUD completas en una estructura full-stack."
+summary: "Operaciones CRUD completas en una estructura full-stack, tras un login y registro protegidos con JWT."
 role: "Full-stack"
 links:
   - label: "Ver proyecto"
-    href: "https://crud-heroes.herokuapp.com/"
+    href: "https://heroes-tcp.netlify.app/"
 featured: true
 order: 3
 cover: "../../../assets/projects/heroesApp.webp"
 theme: "violet"
 ---
 
-Un CRUD completo, de extremo a extremo, sin atajos ni relleno.
+Un CRUD completo, de extremo a extremo, sin atajos ni relleno — protegido tras un flujo de autenticación completo (JWT, rutas protegidas, formularios validados).
