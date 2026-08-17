@@ -13,7 +13,7 @@ links:
   - label: "Ver proyecto"
     href: "https://heroes-tcp.netlify.app/"
 featured: true
-order: 3
+order: 1
 cover: "../../../assets/projects/heroesApp.webp"
 theme: "violet"
 ---

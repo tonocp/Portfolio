@@ -11,7 +11,7 @@ links:
   - label: "Ver proyecto"
     href: "https://paises-app-tcp.netlify.app/"
 featured: false
-order: 8
+order: 9
 cover: "../../../assets/projects/paisesApp.webp"
 theme: "mint"
 ---

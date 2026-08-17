@@ -11,7 +11,7 @@ links:
   - label: "Ver proyecto"
     href: "http://www.tallerescarrascosa.com/"
 featured: true
-order: 5
+order: 6
 cover: "../../../assets/projects/talleresCarrascosa.webp"
 theme: "amber"
 ---
