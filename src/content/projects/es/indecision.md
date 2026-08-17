@@ -11,7 +11,7 @@ links:
   - label: "Ver proyecto"
     href: "https://indecision-tcp.netlify.app/"
 featured: false
-order: 6
+order: 7
 cover: "../../../assets/projects/indecisionApp.webp"
 theme: "coral"
 ---

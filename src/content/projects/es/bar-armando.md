@@ -12,7 +12,7 @@ links:
   - label: "Ver proyecto"
     href: "https://bar-armando-tcp.netlify.app/"
 featured: false
-order: 13
+order: 12
 cover: "../../../assets/projects/barArmando.webp"
 theme: "mint"
 ---
