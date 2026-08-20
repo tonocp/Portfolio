@@ -13,7 +13,7 @@ links:
   - label: "Ver proyecto"
     href: "https://mapas-app-tcp.netlify.app/"
 featured: true
-order: 3
+order: 4
 cover: "../../../assets/projects/mapsApp.webp"
 theme: "ice"
 ---

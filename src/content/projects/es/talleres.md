@@ -10,8 +10,8 @@ role: "CMS"
 links:
   - label: "Ver proyecto"
     href: "https://www.tallerescarrascosa.com/"
-featured: true
-order: 6
+featured: false
+order: 13
 cover: "../../../assets/projects/talleresCarrascosa.webp"
 theme: "amber"
 ---

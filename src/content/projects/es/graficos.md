@@ -12,7 +12,7 @@ links:
   - label: "Ver proyecto"
     href: "https://graficas-tcp.netlify.app/"
 featured: true
-order: 2
+order: 3
 cover: "../../../assets/projects/graficosApp.webp"
 theme: "coral"
 ---
