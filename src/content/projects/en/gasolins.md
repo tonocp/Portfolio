@@ -12,7 +12,7 @@ links:
   - label: "View project"
     href: "https://gasolins.netlify.app/"
 featured: true
-order: 5
+order: 6
 cover: "../../../assets/projects/gasolins.webp"
 theme: "mint"
 ---
