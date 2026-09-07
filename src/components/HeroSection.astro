@@ -17,7 +17,7 @@ const { eyebrow, title, intro, primaryCta, secondaryCta, metrics, metricsAriaLab
 
 <section class="hero section shell">
   <div class="hero-fold">
-    <div class="hero-copy" data-reveal>
+    <div class="hero-copy">
       <p class="eyebrow">{eyebrow}</p>
       <h1>{title}</h1>
       <p class="hero-intro">{intro}</p>
@@ -28,7 +28,7 @@ const { eyebrow, title, intro, primaryCta, secondaryCta, metrics, metricsAriaLab
     </div>
   </div>
 
-  <div class="hero-panel" data-reveal style="--reveal-delay: 150ms">
+  <div class="hero-panel">
     <ul class="metric-grid" aria-label={metricsAriaLabel}>
       {
         metrics.map((metric) => (
