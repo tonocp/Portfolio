@@ -18,7 +18,7 @@ const fixedIcon = fixedColorIcons[name];
   fixedIcon ? (
     <li title={name} class="stack-icon-fixed">
       <button type="button" class="stack-icon-trigger">
-        <svg viewBox={fixedIcon.viewBox} role="img" aria-hidden="true">
+        <svg viewBox={fixedIcon.viewBox} aria-hidden="true">
           {fixedIcon.paths.map((p) => (
             <path d={p.d} fill={p.fill} />
           ))}
@@ -29,7 +29,7 @@ const fixedIcon = fixedColorIcons[name];
   ) : icon ? (
     <li title={name} style={color ? `--icon-color: ${color}` : undefined}>
       <button type="button" class="stack-icon-trigger">
-        <svg viewBox={icon.viewBox ?? "0 0 24 24"} role="img" aria-hidden="true">
+        <svg viewBox={icon.viewBox ?? "0 0 24 24"} aria-hidden="true">
           {gradient && gradientId ? (
             <defs>
               <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">

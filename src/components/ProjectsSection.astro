@@ -37,7 +37,13 @@ const { eyebrow, heading, lead, coverAltPrefix, stackAriaLabelPrefix, projects, 
             rel="noreferrer"
             aria-label={`${coverAltPrefix} ${project.data.title}`}
           >
-            <Image src={project.data.cover} alt="" loading="lazy" />
+            <Image
+              src={project.data.cover}
+              alt=""
+              loading="lazy"
+              widths={[400, 800, 1200]}
+              sizes="(max-width: 900px) 100vw, 45vw"
+            />
           </a>
           <div class="project-content">
             <div class="project-meta">

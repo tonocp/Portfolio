@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import sitemap from "@astrojs/sitemap";
 import { defaultLocale, locales } from "./src/i18n/types.ts";
 
 export default defineConfig({
@@ -10,5 +11,6 @@ export default defineConfig({
     routing: {
       prefixDefaultLocale: false
     }
-  }
+  },
+  integrations: [sitemap()]
 });
